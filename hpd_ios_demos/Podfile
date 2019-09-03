@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'hpd_ios_demos' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for hpd_ios_demos
+  pod 'SnapKit', '~> 5.0.0'
+
+  target 'hpd_ios_demosTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'hpd_ios_demosUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

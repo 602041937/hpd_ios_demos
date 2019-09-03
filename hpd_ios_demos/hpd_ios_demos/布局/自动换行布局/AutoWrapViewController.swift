@@ -8,6 +8,7 @@
 
 import UIKit
 
+//从左到到右，从上到下排列的内容包裹布局
 class AutoWrapViewController: UIViewController {
     
     static func newInstance() -> AutoWrapViewController {
