@@ -15,6 +15,12 @@
 		EAFC7658231EAFF100F528D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFC7656231EAFF100F528D3 /* LaunchScreen.storyboard */; };
 		EAFC7663231EAFF100F528D3 /* hpd_ios_demosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC7662231EAFF100F528D3 /* hpd_ios_demosTests.swift */; };
 		EAFC766E231EAFF100F528D3 /* hpd_ios_demosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC766D231EAFF100F528D3 /* hpd_ios_demosUITests.swift */; };
+		EAFC767E231EB0E000F528D3 /* RichTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC767C231EB0E000F528D3 /* RichTextViewController.swift */; };
+		EAFC767F231EB0E000F528D3 /* RichTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC767D231EB0E000F528D3 /* RichTextViewController.xib */; };
+		EAFC7683231EB32200F528D3 /* AutoWrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC7681231EB32200F528D3 /* AutoWrapViewController.swift */; };
+		EAFC7684231EB32200F528D3 /* AutoWrapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC7682231EB32200F528D3 /* AutoWrapViewController.xib */; };
+		EAFC7688231EB3B700F528D3 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC7686231EB3B700F528D3 /* LayoutViewController.swift */; };
+		EAFC7689231EB3B700F528D3 /* LayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC7687231EB3B700F528D3 /* LayoutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		EAFC7669231EAFF100F528D3 /* hpd_ios_demosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hpd_ios_demosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFC766D231EAFF100F528D3 /* hpd_ios_demosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hpd_ios_demosUITests.swift; sourceTree = "<group>"; };
 		EAFC766F231EAFF100F528D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFC767C231EB0E000F528D3 /* RichTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextViewController.swift; sourceTree = "<group>"; };
+		EAFC767D231EB0E000F528D3 /* RichTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RichTextViewController.xib; sourceTree = "<group>"; };
+		EAFC7681231EB32200F528D3 /* AutoWrapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoWrapViewController.swift; sourceTree = "<group>"; };
+		EAFC7682231EB32200F528D3 /* AutoWrapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoWrapViewController.xib; sourceTree = "<group>"; };
+		EAFC7686231EB3B700F528D3 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
+		EAFC7687231EB3B700F528D3 /* LayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,7 @@
 		EAFC7649231EAFEF00F528D3 /* hpd_ios_demos */ = {
 			isa = PBXGroup;
 			children = (
+				EAFC7685231EB36700F528D3 /* 布局 */,
 				EAFC764A231EAFEF00F528D3 /* AppDelegate.swift */,
 				EAFC764C231EAFEF00F528D3 /* ViewController.swift */,
 				EAFC764E231EAFEF00F528D3 /* Main.storyboard */,
@@ -126,6 +139,35 @@
 				EAFC766F231EAFF100F528D3 /* Info.plist */,
 			);
 			path = hpd_ios_demosUITests;
+			sourceTree = "<group>";
+		};
+		EAFC767B231EB08300F528D3 /* 富文本 */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC767C231EB0E000F528D3 /* RichTextViewController.swift */,
+				EAFC767D231EB0E000F528D3 /* RichTextViewController.xib */,
+			);
+			path = "富文本";
+			sourceTree = "<group>";
+		};
+		EAFC7680231EB29700F528D3 /* 自动换行布局 */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC7681231EB32200F528D3 /* AutoWrapViewController.swift */,
+				EAFC7682231EB32200F528D3 /* AutoWrapViewController.xib */,
+			);
+			path = "自动换行布局";
+			sourceTree = "<group>";
+		};
+		EAFC7685231EB36700F528D3 /* 布局 */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC767B231EB08300F528D3 /* 富文本 */,
+				EAFC7680231EB29700F528D3 /* 自动换行布局 */,
+				EAFC7686231EB3B700F528D3 /* LayoutViewController.swift */,
+				EAFC7687231EB3B700F528D3 /* LayoutViewController.xib */,
+			);
+			path = "布局";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +274,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFC7689231EB3B700F528D3 /* LayoutViewController.xib in Resources */,
+				EAFC7684231EB32200F528D3 /* AutoWrapViewController.xib in Resources */,
 				EAFC7658231EAFF100F528D3 /* LaunchScreen.storyboard in Resources */,
+				EAFC767F231EB0E000F528D3 /* RichTextViewController.xib in Resources */,
 				EAFC7655231EAFF100F528D3 /* Assets.xcassets in Resources */,
 				EAFC7650231EAFEF00F528D3 /* Main.storyboard in Resources */,
 			);
@@ -260,8 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAFC7653231EAFEF00F528D3 /* hpd_ios_demos.xcdatamodeld in Sources */,
+				EAFC767E231EB0E000F528D3 /* RichTextViewController.swift in Sources */,
 				EAFC764D231EAFEF00F528D3 /* ViewController.swift in Sources */,
 				EAFC764B231EAFEF00F528D3 /* AppDelegate.swift in Sources */,
+				EAFC7688231EB3B700F528D3 /* LayoutViewController.swift in Sources */,
+				EAFC7683231EB32200F528D3 /* AutoWrapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
