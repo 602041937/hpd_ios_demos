@@ -13,6 +13,11 @@
 		EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7F82322287900E1A91F /* CardViewController.swift */; };
 		EA52B7FB2322287900E1A91F /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA52B7F92322287900E1A91F /* CardViewController.xib */; };
 		EA52B7FD232228F500E1A91F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7FC232228F500E1A91F /* CardView.swift */; };
+		EA6D7DDD232A447A009A989C /* HCPRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D7DDB232A447A009A989C /* HCPRefreshViewController.swift */; };
+		EA6D7DDE232A447A009A989C /* HCPRefreshViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6D7DDC232A447A009A989C /* HCPRefreshViewController.xib */; };
+		EA6D7DE1232A46BE009A989C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D7DDF232A46BD009A989C /* MainTabBarController.swift */; };
+		EA6D7DE2232A46BE009A989C /* MainTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6D7DE0232A46BE009A989C /* MainTabBarController.xib */; };
+		EA6D7DE4232A4927009A989C /* HCPTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D7DE3232A4927009A989C /* HCPTouchView.swift */; };
 		EAFC764B231EAFEF00F528D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC764A231EAFEF00F528D3 /* AppDelegate.swift */; };
 		EAFC764D231EAFEF00F528D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC764C231EAFEF00F528D3 /* ViewController.swift */; };
 		EAFC7650231EAFEF00F528D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFC764E231EAFEF00F528D3 /* Main.storyboard */; };
@@ -60,6 +65,11 @@
 		EA52B7F82322287900E1A91F /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		EA52B7F92322287900E1A91F /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		EA52B7FC232228F500E1A91F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EA6D7DDB232A447A009A989C /* HCPRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPRefreshViewController.swift; sourceTree = "<group>"; };
+		EA6D7DDC232A447A009A989C /* HCPRefreshViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCPRefreshViewController.xib; sourceTree = "<group>"; };
+		EA6D7DDF232A46BD009A989C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		EA6D7DE0232A46BE009A989C /* MainTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarController.xib; sourceTree = "<group>"; };
+		EA6D7DE3232A4927009A989C /* HCPTouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPTouchView.swift; sourceTree = "<group>"; };
 		EAFC7647231EAFEF00F528D3 /* hpd_ios_demos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hpd_ios_demos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFC764A231EAFEF00F528D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFC764C231EAFEF00F528D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +154,16 @@
 			path = CardView;
 			sourceTree = "<group>";
 		};
+		EA6D7DDA232A4459009A989C /* HCP刷新 */ = {
+			isa = PBXGroup;
+			children = (
+				EA6D7DDB232A447A009A989C /* HCPRefreshViewController.swift */,
+				EA6D7DDC232A447A009A989C /* HCPRefreshViewController.xib */,
+				EA6D7DE3232A4927009A989C /* HCPTouchView.swift */,
+			);
+			path = "HCP刷新";
+			sourceTree = "<group>";
+		};
 		EAFC763E231EAFEF00F528D3 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +197,8 @@
 				EAFC7656231EAFF100F528D3 /* LaunchScreen.storyboard */,
 				EAFC7659231EAFF100F528D3 /* Info.plist */,
 				EAFC7651231EAFEF00F528D3 /* hpd_ios_demos.xcdatamodeld */,
+				EA6D7DDF232A46BD009A989C /* MainTabBarController.swift */,
+				EA6D7DE0232A46BE009A989C /* MainTabBarController.xib */,
 			);
 			path = hpd_ios_demos;
 			sourceTree = "<group>";
@@ -221,6 +243,7 @@
 		EAFC7685231EB36700F528D3 /* 布局 */ = {
 			isa = PBXGroup;
 			children = (
+				EA6D7DDA232A4459009A989C /* HCP刷新 */,
 				EA52B7F7232114E300E1A91F /* CardView */,
 				EAFC767B231EB08300F528D3 /* 富文本 */,
 				EAFC7680231EB29700F528D3 /* 自动换行布局 */,
@@ -341,9 +364,11 @@
 				EAFC7689231EB3B700F528D3 /* LayoutViewController.xib in Resources */,
 				EAFC7684231EB32200F528D3 /* AutoWrapViewController.xib in Resources */,
 				EAFC7658231EAFF100F528D3 /* LaunchScreen.storyboard in Resources */,
+				EA6D7DE2232A46BE009A989C /* MainTabBarController.xib in Resources */,
 				EAFC767F231EB0E000F528D3 /* RichTextViewController.xib in Resources */,
 				EA52B7FB2322287900E1A91F /* CardViewController.xib in Resources */,
 				EAFC7655231EAFF100F528D3 /* Assets.xcassets in Resources */,
+				EA6D7DDE232A447A009A989C /* HCPRefreshViewController.xib in Resources */,
 				EAFC7650231EAFEF00F528D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,10 +480,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6D7DDD232A447A009A989C /* HCPRefreshViewController.swift in Sources */,
 				EAFC7653231EAFEF00F528D3 /* hpd_ios_demos.xcdatamodeld in Sources */,
+				EA6D7DE1232A46BE009A989C /* MainTabBarController.swift in Sources */,
 				EA52B7FD232228F500E1A91F /* CardView.swift in Sources */,
 				EAFC767E231EB0E000F528D3 /* RichTextViewController.swift in Sources */,
 				EAFC764D231EAFEF00F528D3 /* ViewController.swift in Sources */,
+				EA6D7DE4232A4927009A989C /* HCPTouchView.swift in Sources */,
 				EAFC764B231EAFEF00F528D3 /* AppDelegate.swift in Sources */,
 				EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */,
 				EAFC768B231EB8F200F528D3 /* AutoWrapView.swift in Sources */,
