@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let nav = UINavigationController(rootViewController: AutoWrapViewController.newInstance())
+        let nav = UINavigationController(rootViewController: CardViewController.newInstance())
         window?.rootViewController = nav
         
         return true

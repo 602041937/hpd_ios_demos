@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6291D5FE84F773008722DD87 /* Pods_hpd_ios_demos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D41A38688D9D2904F81F6E7 /* Pods_hpd_ios_demos.framework */; };
 		C677A1E08535538C60F5AA03 /* Pods_hpd_ios_demosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F72F103F969BC644AF31A7 /* Pods_hpd_ios_demosTests.framework */; };
 		D57457A063FC741FD34104B3 /* Pods_hpd_ios_demosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F80021F8503EDA4D3777BB /* Pods_hpd_ios_demosUITests.framework */; };
+		EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7F82322287900E1A91F /* CardViewController.swift */; };
+		EA52B7FB2322287900E1A91F /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA52B7F92322287900E1A91F /* CardViewController.xib */; };
+		EA52B7FD232228F500E1A91F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7FC232228F500E1A91F /* CardView.swift */; };
 		EAFC764B231EAFEF00F528D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC764A231EAFEF00F528D3 /* AppDelegate.swift */; };
 		EAFC764D231EAFEF00F528D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC764C231EAFEF00F528D3 /* ViewController.swift */; };
 		EAFC7650231EAFEF00F528D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFC764E231EAFEF00F528D3 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		737BD3B8885DE3E3E6E673DE /* Pods-hpd_ios_demos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demos.debug.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos.debug.xcconfig"; sourceTree = "<group>"; };
 		7D41A38688D9D2904F81F6E7 /* Pods_hpd_ios_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpd_ios_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44A56D20E0AEB24B80BA24C /* Pods-hpd_ios_demosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demosTests.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demosTests/Pods-hpd_ios_demosTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA52B7F82322287900E1A91F /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		EA52B7F92322287900E1A91F /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		EA52B7FC232228F500E1A91F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EAFC7647231EAFEF00F528D3 /* hpd_ios_demos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hpd_ios_demos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFC764A231EAFEF00F528D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFC764C231EAFEF00F528D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,8 +131,17 @@
 				1AD3A105B76DADA9BA10A235 /* Pods-hpd_ios_demosUITests.debug.xcconfig */,
 				424F50F5826DDA0CB246EB47 /* Pods-hpd_ios_demosUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA52B7F7232114E300E1A91F /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				EA52B7F82322287900E1A91F /* CardViewController.swift */,
+				EA52B7F92322287900E1A91F /* CardViewController.xib */,
+				EA52B7FC232228F500E1A91F /* CardView.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		EAFC763E231EAFEF00F528D3 = {
@@ -206,6 +221,7 @@
 		EAFC7685231EB36700F528D3 /* 布局 */ = {
 			isa = PBXGroup;
 			children = (
+				EA52B7F7232114E300E1A91F /* CardView */,
 				EAFC767B231EB08300F528D3 /* 富文本 */,
 				EAFC7680231EB29700F528D3 /* 自动换行布局 */,
 				EAFC7686231EB3B700F528D3 /* LayoutViewController.swift */,
@@ -326,6 +342,7 @@
 				EAFC7684231EB32200F528D3 /* AutoWrapViewController.xib in Resources */,
 				EAFC7658231EAFF100F528D3 /* LaunchScreen.storyboard in Resources */,
 				EAFC767F231EB0E000F528D3 /* RichTextViewController.xib in Resources */,
+				EA52B7FB2322287900E1A91F /* CardViewController.xib in Resources */,
 				EAFC7655231EAFF100F528D3 /* Assets.xcassets in Resources */,
 				EAFC7650231EAFEF00F528D3 /* Main.storyboard in Resources */,
 			);
@@ -439,9 +456,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAFC7653231EAFEF00F528D3 /* hpd_ios_demos.xcdatamodeld in Sources */,
+				EA52B7FD232228F500E1A91F /* CardView.swift in Sources */,
 				EAFC767E231EB0E000F528D3 /* RichTextViewController.swift in Sources */,
 				EAFC764D231EAFEF00F528D3 /* ViewController.swift in Sources */,
 				EAFC764B231EAFEF00F528D3 /* AppDelegate.swift in Sources */,
+				EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */,
 				EAFC768B231EB8F200F528D3 /* AutoWrapView.swift in Sources */,
 				EAFC7688231EB3B700F528D3 /* LayoutViewController.swift in Sources */,
 				EAFC7683231EB32200F528D3 /* AutoWrapViewController.swift in Sources */,
