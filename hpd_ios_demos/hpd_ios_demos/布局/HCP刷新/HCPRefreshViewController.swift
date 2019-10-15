@@ -10,13 +10,23 @@ import UIKit
 
 class HCPRefreshViewController: UIViewController {
     
+    @IBOutlet weak var touchView: HCPTouchView!
+    @IBOutlet weak var lbFresh: UILabel!
+    
     static func newInstance() -> HCPRefreshViewController {
         return HCPRefreshViewController(nibName: "HCPRefreshViewController", bundle: nil)
     }
-
+    
+    @IBAction func endRefleshClick(_ sender: Any) {
+        touchView.back()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationController?.navigationBar.isHidden = true
+        touchView.callBack = { value in
+            self.lbFresh.text = value
+        }
     }
 }
