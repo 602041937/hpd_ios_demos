@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -125,7 +125,6 @@
 				1AD3A105B76DADA9BA10A235 /* Pods-hpd_ios_demosUITests.debug.xcconfig */,
 				424F50F5826DDA0CB246EB47 /* Pods-hpd_ios_demosUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,12 +205,20 @@
 		EAFC7685231EB36700F528D3 /* 布局 */ = {
 			isa = PBXGroup;
 			children = (
+				EAFC768C2323948C00F528D3 /* 圆角 */,
 				EAFC767B231EB08300F528D3 /* 富文本 */,
 				EAFC7680231EB29700F528D3 /* 自动换行布局 */,
 				EAFC7686231EB3B700F528D3 /* LayoutViewController.swift */,
 				EAFC7687231EB3B700F528D3 /* LayoutViewController.xib */,
 			);
 			path = "布局";
+			sourceTree = "<group>";
+		};
+		EAFC768C2323948C00F528D3 /* 圆角 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "圆角";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

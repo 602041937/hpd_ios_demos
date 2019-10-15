@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 
 class AutoWrapView: UIView {
+    
+    private var currentHeight: CGFloat = 0
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,17 +24,30 @@ class AutoWrapView: UIView {
     }
     
     private func setup() {
-        backgroundColor = .red
         setData()
     }
     
     func setData() {
+        currentHeight = 0
         snp.makeConstraints { (make) in
-            make.height.equalTo(400)
+            make.height.equalTo(currentHeight)
         }
     }
     
-    func dealAddSubView(view: UIView) {
+    override func didAddSubview(_ subview: UIView) {
+        super.didAddSubview(subview)
+        
+        subview.frame = CGRect(x: subview.frame.minX, y: subview.frame.minY + currentHeight, width: subview.frame.width, height: subview.frame.height)
+        
+        currentHeight = subview.frame.maxY
+        
+        snp.updateConstraints { (make) in
+            make.height.equalTo(currentHeight)
+        }
+    }
     
+    override func removeFromSuperview() {
+        super.removeFromSuperview()
+        currentHeight = 0
     }
 }
