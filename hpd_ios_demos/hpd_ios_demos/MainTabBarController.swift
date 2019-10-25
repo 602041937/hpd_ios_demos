@@ -21,7 +21,7 @@ class MainTabBarController: UITabBarController {
         
         tabBar.backgroundColor = .white
 
-        let nav = UINavigationController(rootViewController: HCPRefreshViewController.newInstance())
+        let nav = UINavigationController(rootViewController: HCPHomeViewController.newInstance())
         viewControllers = [nav]
     }
 }

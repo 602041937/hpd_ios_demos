@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HCPRefreshViewController" customModule="hpd_ios_demos" customModuleProvider="target">
             <connections>
                 <outlet property="lbFresh" destination="JkM-cU-Hyz" id="gh0-VF-7mf"/>
+                <outlet property="tableView" destination="het-PF-ogc" id="TKC-7F-p4M"/>
                 <outlet property="touchView" destination="wpy-yF-tVw" id="49M-w8-RJQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,26 +37,47 @@
                         <constraint firstItem="JkM-cU-Hyz" firstAttribute="centerX" secondItem="ruc-1z-5XA" secondAttribute="centerX" id="sPD-HA-wqr"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpy-yF-tVw" customClass="HCPTouchView" customModule="hpd_ios_demos" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpy-yF-tVw" customClass="HCPTouchView" customModule="hpd_ios_demos" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9c-VX-zKI">
-                            <rect key="frame" x="68" y="120" width="62" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="het-PF-ogc" customClass="HCPTouch2TableView" customModule="hpd_ios_demos" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="414" height="758"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9c-VX-zKI">
+                            <rect key="frame" x="176" y="30" width="62" height="30"/>
                             <state key="normal" title="刷新完成"/>
                             <connections>
                                 <action selector="endRefleshClick:" destination="-1" eventType="touchUpInside" id="4vE-lN-uC1"/>
                             </connections>
                         </button>
+                        <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkM-eF-dgU" customClass="HCPTouchScrollView" customModule="hpd_ios_demos" customModuleProvider="target">
+                            <rect key="frame" x="71" y="97" width="302" height="604"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <viewLayoutGuide key="contentLayoutGuide" id="nql-Ga-Isj"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="eo5-Pu-cZC"/>
+                        </scrollView>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.70980392160000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="het-PF-ogc" secondAttribute="bottom" id="4u3-Tt-7Eg"/>
+                        <constraint firstItem="k9c-VX-zKI" firstAttribute="top" secondItem="wpy-yF-tVw" secondAttribute="top" constant="30" id="8dq-ud-CJr"/>
+                        <constraint firstItem="het-PF-ogc" firstAttribute="top" secondItem="k9c-VX-zKI" secondAttribute="bottom" id="Bjj-kE-T8A"/>
+                        <constraint firstItem="k9c-VX-zKI" firstAttribute="centerX" secondItem="wpy-yF-tVw" secondAttribute="centerX" id="Yuf-d0-p9A"/>
+                        <constraint firstItem="het-PF-ogc" firstAttribute="leading" secondItem="wpy-yF-tVw" secondAttribute="leading" id="cai-0h-8uS"/>
+                        <constraint firstAttribute="trailing" secondItem="het-PF-ogc" secondAttribute="trailing" id="l3Z-ti-VWH"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="wpy-yF-tVw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YM7-Ss-qwG"/>
+                <constraint firstItem="wpy-yF-tVw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cu8-iq-0bU"/>
+                <constraint firstItem="wpy-yF-tVw" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="iyo-oI-sDA"/>
                 <constraint firstItem="ruc-1z-5XA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mSh-Gc-tRb"/>
                 <constraint firstItem="ruc-1z-5XA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pEV-xH-M6g"/>
+                <constraint firstItem="wpy-yF-tVw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="twL-VP-pAZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ruc-1z-5XA" secondAttribute="bottom" id="uxn-SQ-lhb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ruc-1z-5XA" secondAttribute="trailing" id="vHN-e6-1HO"/>
             </constraints>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 enum HCPTouchViewState {
     case normal
@@ -41,14 +42,14 @@ class HCPTouchView: UIView {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        
         super.touchesBegan(touches, with: event)
         if state != .normal {
             return
         }
-      
+        
         originalFrame = frame
-        print("touchesBegan")
+        print("HCPTouchView touchesBegan")
         var firstTouch = touches.first!
         let currentTouchPoint = firstTouch.location(in: self)
         firstTouchY = currentTouchPoint.y
@@ -63,10 +64,12 @@ class HCPTouchView: UIView {
         let currentTouchPoint = firstTouch.location(in: self)
         let previousTouchPoint = firstTouch.previousLocation(in: self)
         
-        print("aaa  currentTouchPoint = \(currentTouchPoint)")
-        print("aaa previousTouchPoint = \(previousTouchPoint)")
+        print("HCPTouchView  currentTouchPoint = \(currentTouchPoint)")
+        print("HCPTouchView previousTouchPoint = \(previousTouchPoint)")
         
         let currentY = currentTouchPoint.y - firstTouchY + self.frame.origin.y
+        
+        print("currentY = \(currentY)")
         
         if currentY < 0 {
             return
@@ -93,14 +96,19 @@ class HCPTouchView: UIView {
             return
         }
         
-        self.frame = CGRect(x: self.frame.origin.x, y: currentY, width: self.frame.size.width, height: self.frame.size.height)
+        snp.updateConstraints { (make) in
+            make.top.equalTo(currentY)
+        }
         
-        print("touchesMoved")
+        
+        //        self.frame = CGRect(x: self.frame.origin.x, y: currentY, width: self.frame.size.width, height: self.frame.size.height)
+        //
+        print("HCPTouchView touchesMoved")
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        print("touchesEnded")
+        print("HCPTouchView touchesEnded")
         if state == .refresh {
             refresh()
             callBack?("正在刷新~")
@@ -114,28 +122,51 @@ class HCPTouchView: UIView {
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
-        print("touchesCancelled")
+        print("HCPTouchView touchesCancelled")
         //        back()
     }
     
     func back() {
         state = .normal
         UIView.animate(withDuration: 0.25) {
-            self.frame = CGRect(x:0, y: self.originalFrame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
+            self.snp.updateConstraints { (make) in
+                make.top.equalTo(self.originalFrame.origin.y)
+            }
+            self.superview?.layoutIfNeeded()
         }
+        
+        //        UIView.animate(withDuration: 1) {
+        //            self.layoutIfNeeded()
+        ////            self.frame = CGRect(x:0, y: self.originalFrame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
+        //        }
     }
     
     private func refresh() {
         print("refresh")
+        
         UIView.animate(withDuration: 0.25) {
-            self.frame = CGRect(x:0, y: self.originalFrame.origin.y + 100, width: self.frame.size.width, height: self.frame.size.height)
+            self.snp.updateConstraints { (make) in
+                make.top.equalTo(self.originalFrame.origin.y + 100)
+            }
+            self.superview?.layoutIfNeeded()
         }
+        
+        //            self.frame = CGRect(x:0, y: self.originalFrame.origin.y + 100, width: self.frame.size.width, height: self.frame.size.height)
     }
     
     private func relax() {
-          print("relax")
-          UIView.animate(withDuration: 0.25) {
-              self.frame = CGRect(x:0, y: self.originalFrame.origin.y + 200, width: self.frame.size.width, height: self.frame.size.height)
-          }
-      }
+        print("relax")
+        
+        UIView.animate(withDuration: 0.25) {
+            self.snp.updateConstraints { (make) in
+                make.top.equalTo(self.originalFrame.origin.y + 200)
+            }
+            self.superview?.layoutIfNeeded()
+            //            self.frame = CGRect(x:0, y: self.originalFrame.origin.y + 200, width: self.frame.size.width, height: self.frame.size.height)
+        }
+    }
+    
+//    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+//        return self
+//    }
 }
