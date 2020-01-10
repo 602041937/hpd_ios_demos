@@ -7,7 +7,6 @@ target 'hpd_ios_demos' do
 
   # Pods for hpd_ios_demos
   pod 'SnapKit', '~> 5.0.0'
-  pod 'TangramKit'
 
   target 'hpd_ios_demosTests' do
     inherit! :search_paths

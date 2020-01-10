@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nav = UINavigationController(rootViewController: HCPRefreshViewController.newInstance())
 //        window?.rootViewController = nav
         
-        let mainTabBarController = MainTabBarController.newInstance()
+        let mainTabBarController = LayoutViewController.newInstance()
         window?.rootViewController = mainTabBarController
         
         return true
