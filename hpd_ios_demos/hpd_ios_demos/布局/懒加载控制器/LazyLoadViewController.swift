@@ -30,7 +30,7 @@ class LazyLoadViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         
-        scrollView.setData(controllers: [controller1,controller2,controller3,controller4])
+        scrollView.setData(controllers: [controller1,controller2,controller3,controller4],currentIndex: 1)
                 
     
     }

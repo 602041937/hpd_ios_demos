@@ -13,6 +13,8 @@ class HCPLazyLoadScrollView: UIScrollView {
     private var controllers: [HCPLazyLoadViewController] = []
     private var currentIndex = 0
     
+    private var isDealCurrentIndex = false
+    
     init() {
         super.init(frame: .zero)
         setup()
@@ -47,6 +49,11 @@ class HCPLazyLoadScrollView: UIScrollView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        if isDealCurrentIndex == false {
+            isDealCurrentIndex = true
+            setContentOffset(CGPoint(x: CGFloat(currentIndex) * bounds.width, y: 0), animated: true)
+        }
         
         for (i,vcItem) in controllers.enumerated() {
             vcItem.view.frame = CGRect(x: CGFloat(i) * bounds.width, y: 0, width: bounds.width, height: bounds.height)
