@@ -10,6 +10,7 @@
 		6291D5FE84F773008722DD87 /* Pods_hpd_ios_demos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D41A38688D9D2904F81F6E7 /* Pods_hpd_ios_demos.framework */; };
 		C677A1E08535538C60F5AA03 /* Pods_hpd_ios_demosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F72F103F969BC644AF31A7 /* Pods_hpd_ios_demosTests.framework */; };
 		D57457A063FC741FD34104B3 /* Pods_hpd_ios_demosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F80021F8503EDA4D3777BB /* Pods_hpd_ios_demosUITests.framework */; };
+		EA158AD723C88366004C0E73 /* HCPLazyLoadScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */; };
 		EA235E5C23654A4D0033EAE0 /* BezierPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA235E5B23654A4D0033EAE0 /* BezierPathViewController.swift */; };
 		EA235E5E23654AE80033EAE0 /* BezierDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA235E5D23654AE80033EAE0 /* BezierDemoView.swift */; };
 		EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7F82322287900E1A91F /* CardViewController.swift */; };
@@ -27,6 +28,8 @@
 		EAB5BEAD235AAEB500A83B19 /* HCPTouchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB5BEAC235AAEB500A83B19 /* HCPTouchTableViewCell.swift */; };
 		EAB5BEB0235AEE2C00A83B19 /* HCPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB5BEAE235AEE2C00A83B19 /* HCPHomeViewController.swift */; };
 		EAB5BEB1235AEE2C00A83B19 /* HCPHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB5BEAF235AEE2C00A83B19 /* HCPHomeViewController.xib */; };
+		EAF2F8F623C820EE002DAF6F /* LazyLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF2F8F523C820EE002DAF6F /* LazyLoadViewController.swift */; };
+		EAF2F8F823C822A9002DAF6F /* HCPLazyLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF2F8F723C822A9002DAF6F /* HCPLazyLoadViewController.swift */; };
 		EAFC764B231EAFEF00F528D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC764A231EAFEF00F528D3 /* AppDelegate.swift */; };
 		EAFC764D231EAFEF00F528D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC764C231EAFEF00F528D3 /* ViewController.swift */; };
 		EAFC7650231EAFEF00F528D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFC764E231EAFEF00F528D3 /* Main.storyboard */; };
@@ -71,6 +74,7 @@
 		737BD3B8885DE3E3E6E673DE /* Pods-hpd_ios_demos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demos.debug.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos.debug.xcconfig"; sourceTree = "<group>"; };
 		7D41A38688D9D2904F81F6E7 /* Pods_hpd_ios_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpd_ios_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44A56D20E0AEB24B80BA24C /* Pods-hpd_ios_demosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demosTests.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demosTests/Pods-hpd_ios_demosTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPLazyLoadScrollView.swift; sourceTree = "<group>"; };
 		EA235E5B23654A4D0033EAE0 /* BezierPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathViewController.swift; sourceTree = "<group>"; };
 		EA235E5D23654AE80033EAE0 /* BezierDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierDemoView.swift; sourceTree = "<group>"; };
 		EA52B7F82322287900E1A91F /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		EAB5BEAC235AAEB500A83B19 /* HCPTouchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPTouchTableViewCell.swift; sourceTree = "<group>"; };
 		EAB5BEAE235AEE2C00A83B19 /* HCPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPHomeViewController.swift; sourceTree = "<group>"; };
 		EAB5BEAF235AEE2C00A83B19 /* HCPHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCPHomeViewController.xib; sourceTree = "<group>"; };
+		EAF2F8F523C820EE002DAF6F /* LazyLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyLoadViewController.swift; sourceTree = "<group>"; };
+		EAF2F8F723C822A9002DAF6F /* HCPLazyLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPLazyLoadViewController.swift; sourceTree = "<group>"; };
 		EAFC7647231EAFEF00F528D3 /* hpd_ios_demos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hpd_ios_demos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFC764A231EAFEF00F528D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFC764C231EAFEF00F528D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +168,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA158AD523C8831A004C0E73 /* code */ = {
+			isa = PBXGroup;
+			children = (
+				EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */,
+				EAF2F8F723C822A9002DAF6F /* HCPLazyLoadViewController.swift */,
+			);
+			path = code;
+			sourceTree = "<group>";
+		};
 		EA235E5A23634C530033EAE0 /* 不规则图形 */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +211,15 @@
 				EAB5BEAF235AEE2C00A83B19 /* HCPHomeViewController.xib */,
 			);
 			path = "HCP刷新";
+			sourceTree = "<group>";
+		};
+		EAF2F8F323C820BC002DAF6F /* 懒加载控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				EA158AD523C8831A004C0E73 /* code */,
+				EAF2F8F523C820EE002DAF6F /* LazyLoadViewController.swift */,
+			);
+			path = "懒加载控制器";
 			sourceTree = "<group>";
 		};
 		EAFC763E231EAFEF00F528D3 = {
@@ -277,6 +301,7 @@
 		EAFC7685231EB36700F528D3 /* 布局 */ = {
 			isa = PBXGroup;
 			children = (
+				EAF2F8F323C820BC002DAF6F /* 懒加载控制器 */,
 				EA235E5A23634C530033EAE0 /* 不规则图形 */,
 				EAFC768C2323948C00F528D3 /* 圆角 */,
 				EA6D7DDA232A4459009A989C /* HCP刷新 */,
@@ -528,12 +553,15 @@
 				EA6D7DDD232A447A009A989C /* HCPRefreshViewController.swift in Sources */,
 				EA235E5C23654A4D0033EAE0 /* BezierPathViewController.swift in Sources */,
 				EAFC7653231EAFEF00F528D3 /* hpd_ios_demos.xcdatamodeld in Sources */,
+				EAF2F8F823C822A9002DAF6F /* HCPLazyLoadViewController.swift in Sources */,
 				EA6D7DE1232A46BE009A989C /* MainTabBarController.swift in Sources */,
 				EA52B7FD232228F500E1A91F /* CardView.swift in Sources */,
 				EAFC767E231EB0E000F528D3 /* RichTextViewController.swift in Sources */,
+				EAF2F8F623C820EE002DAF6F /* LazyLoadViewController.swift in Sources */,
 				EAFC764D231EAFEF00F528D3 /* ViewController.swift in Sources */,
 				EA6D7DE4232A4927009A989C /* HCPTouchView.swift in Sources */,
 				EAB5BEA52359A45A00A83B19 /* HCPTouchScrollView.swift in Sources */,
+				EA158AD723C88366004C0E73 /* HCPLazyLoadScrollView.swift in Sources */,
 				EAFC764B231EAFEF00F528D3 /* AppDelegate.swift in Sources */,
 				EAB5BEA92359AB4700A83B19 /* HCPTouch2TableView.swift in Sources */,
 				EAB5BEAD235AAEB500A83B19 /* HCPTouchTableViewCell.swift in Sources */,
