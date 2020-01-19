@@ -16,6 +16,8 @@
 		EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7F82322287900E1A91F /* CardViewController.swift */; };
 		EA52B7FB2322287900E1A91F /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA52B7F92322287900E1A91F /* CardViewController.xib */; };
 		EA52B7FD232228F500E1A91F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7FC232228F500E1A91F /* CardView.swift */; };
+		EA65CEE823D439FE007FC7BC /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65CEE723D439FE007FC7BC /* Page1ViewController.swift */; };
+		EA65CEEA23D43A22007FC7BC /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65CEE923D43A22007FC7BC /* Page2ViewController.swift */; };
 		EA6D7DDD232A447A009A989C /* HCPRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D7DDB232A447A009A989C /* HCPRefreshViewController.swift */; };
 		EA6D7DDE232A447A009A989C /* HCPRefreshViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6D7DDC232A447A009A989C /* HCPRefreshViewController.xib */; };
 		EA6D7DE1232A46BE009A989C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D7DDF232A46BD009A989C /* MainTabBarController.swift */; };
@@ -80,6 +82,8 @@
 		EA52B7F82322287900E1A91F /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		EA52B7F92322287900E1A91F /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		EA52B7FC232228F500E1A91F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EA65CEE723D439FE007FC7BC /* Page1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
+		EA65CEE923D43A22007FC7BC /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		EA6D7DDB232A447A009A989C /* HCPRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPRefreshViewController.swift; sourceTree = "<group>"; };
 		EA6D7DDC232A447A009A989C /* HCPRefreshViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCPRefreshViewController.xib; sourceTree = "<group>"; };
 		EA6D7DDF232A46BD009A989C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -218,6 +222,8 @@
 			children = (
 				EA158AD523C8831A004C0E73 /* code */,
 				EAF2F8F523C820EE002DAF6F /* LazyLoadViewController.swift */,
+				EA65CEE723D439FE007FC7BC /* Page1ViewController.swift */,
+				EA65CEE923D43A22007FC7BC /* Page2ViewController.swift */,
 			);
 			path = "懒加载控制器";
 			sourceTree = "<group>";
@@ -301,8 +307,8 @@
 		EAFC7685231EB36700F528D3 /* 布局 */ = {
 			isa = PBXGroup;
 			children = (
-				EAF2F8F323C820BC002DAF6F /* 懒加载控制器 */,
 				EA235E5A23634C530033EAE0 /* 不规则图形 */,
+				EAF2F8F323C820BC002DAF6F /* 懒加载控制器 */,
 				EAFC768C2323948C00F528D3 /* 圆角 */,
 				EA6D7DDA232A4459009A989C /* HCP刷新 */,
 				EA52B7F7232114E300E1A91F /* CardView */,
@@ -558,11 +564,13 @@
 				EA52B7FD232228F500E1A91F /* CardView.swift in Sources */,
 				EAFC767E231EB0E000F528D3 /* RichTextViewController.swift in Sources */,
 				EAF2F8F623C820EE002DAF6F /* LazyLoadViewController.swift in Sources */,
+				EA65CEE823D439FE007FC7BC /* Page1ViewController.swift in Sources */,
 				EAFC764D231EAFEF00F528D3 /* ViewController.swift in Sources */,
 				EA6D7DE4232A4927009A989C /* HCPTouchView.swift in Sources */,
 				EAB5BEA52359A45A00A83B19 /* HCPTouchScrollView.swift in Sources */,
 				EA158AD723C88366004C0E73 /* HCPLazyLoadScrollView.swift in Sources */,
 				EAFC764B231EAFEF00F528D3 /* AppDelegate.swift in Sources */,
+				EA65CEEA23D43A22007FC7BC /* Page2ViewController.swift in Sources */,
 				EAB5BEA92359AB4700A83B19 /* HCPTouch2TableView.swift in Sources */,
 				EAB5BEAD235AAEB500A83B19 /* HCPTouchTableViewCell.swift in Sources */,
 				EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */,
