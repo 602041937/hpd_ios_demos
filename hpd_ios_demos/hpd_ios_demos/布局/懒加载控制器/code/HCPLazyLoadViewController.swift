@@ -12,30 +12,21 @@ import Then
 
 class HCPLazyLoadViewController: UIViewController {
     
-    private let backView = UIView().then {
-        $0.backgroundColor = .red
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .green
-        
-        view.addSubview(backView)
-        
-        backView.snp.makeConstraints { (make) in
-            make.top.left.equalTo(30)
-            make.bottom.right.equalTo(-30)
-        }
+        view.backgroundColor = .white
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("HCPLazyLoadViewController viewWillDisappear")
+    func lazyLoad() {
+        print("HCPLazyLoadViewController lazyLoad")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("HCPLazyLoadViewController viewWillAppear")
+    func lazyDidAppear() {
+        print("HCPLazyLoadViewController lazyDidAppear")
+    }
+    
+    func lazyDidDisAppear() {
+        print("HCPLazyLoadViewController lazyDidDisAppear")
     }
 }

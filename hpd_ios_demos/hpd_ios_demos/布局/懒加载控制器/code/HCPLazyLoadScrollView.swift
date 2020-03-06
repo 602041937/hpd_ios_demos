@@ -8,12 +8,21 @@
 
 import UIKit
 
+protocol HCPLazyLoadScrollViewDelegate{
+    
+    func indexChange(index: Int)
+}
+
 class HCPLazyLoadScrollView: UIScrollView {
     
     private var controllers: [HCPLazyLoadViewController] = []
     private var currentIndex = 0
+    private var currentController: HCPLazyLoadViewController?
+    private var hasSelectIndexs: [Int] = []
     
     private var isDealCurrentIndex = false
+    
+    var lazyLoadScrollViewDelegate: HCPLazyLoadScrollViewDelegate?
     
     init() {
         super.init(frame: .zero)
@@ -34,6 +43,8 @@ class HCPLazyLoadScrollView: UIScrollView {
         isScrollEnabled = true
         bounces = false
         delegate = self
+        showsVerticalScrollIndicator = false
+        showsHorizontalScrollIndicator = false
     }
     
     func setData(controllers: [HCPLazyLoadViewController],currentIndex: Int = 0) {
@@ -53,6 +64,11 @@ class HCPLazyLoadScrollView: UIScrollView {
         if isDealCurrentIndex == false {
             isDealCurrentIndex = true
             setContentOffset(CGPoint(x: CGFloat(currentIndex) * bounds.width, y: 0), animated: true)
+            currentController = controllers[currentIndex]
+            hasSelectIndexs.append(currentIndex)
+            currentController?.lazyLoad()
+            currentController?.lazyDidAppear()
+            
         }
         
         for (i,vcItem) in controllers.enumerated() {
@@ -77,12 +93,20 @@ class HCPLazyLoadScrollView: UIScrollView {
 
 extension HCPLazyLoadScrollView: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("HCPLazyLoadScrollView scrollView.subviews.count=\(scrollView.subviews.count)")
-    }
-    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("HCPLazyLoadScrollView scrollView.contentOffset.x=\(scrollView.contentOffset.x)")
         
+        let tempCurrentIndex = Int(scrollView.contentOffset.x / bounds.width)
+        if tempCurrentIndex == currentIndex {
+            return
+        }
+        currentController?.lazyDidDisAppear()
+        currentIndex = tempCurrentIndex
+        currentController = controllers[currentIndex]
+        if hasSelectIndexs.contains(currentIndex) == false {
+            hasSelectIndexs.append(currentIndex)
+            currentController?.lazyLoad()
+        }
+        currentController?.lazyDidAppear()
+        lazyLoadScrollViewDelegate?.indexChange(index: currentIndex)
     }
 }
