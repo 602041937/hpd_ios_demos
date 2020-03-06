@@ -12,7 +12,8 @@ target 'hpd_ios_demos' do
   pod 'Moya/RxSwift'
   pod 'RxDataSources'
   pod 'RxGesture'
-  pod 'Action'
+  
+  pod "SkeletonView"
 
   target 'hpd_ios_demosTests' do
     inherit! :search_paths
