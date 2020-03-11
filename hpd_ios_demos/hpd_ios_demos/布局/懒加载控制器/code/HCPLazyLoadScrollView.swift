@@ -68,7 +68,7 @@ class HCPLazyLoadScrollView: UIScrollView {
             hasSelectIndexs.append(currentIndex)
             currentController?.lazyLoad()
             currentController?.lazyDidAppear()
-            
+            lazyLoadScrollViewDelegate?.indexChange(index: currentIndex)
         }
         
         for (i,vcItem) in controllers.enumerated() {
@@ -88,6 +88,22 @@ class HCPLazyLoadScrollView: UIScrollView {
             }
         }
         return nil
+    }
+    
+    func setCurrentIndex(_ index: Int) {
+        if index == currentIndex {
+            return
+        }
+        setContentOffset(CGPoint(x: index * Int(bounds.width), y: 0), animated: false)
+        currentController?.lazyDidDisAppear()
+        currentIndex = index
+        currentController = controllers[currentIndex]
+        if hasSelectIndexs.contains(currentIndex) == false {
+            hasSelectIndexs.append(currentIndex)
+            currentController?.lazyLoad()
+        }
+        currentController?.lazyDidAppear()
+        lazyLoadScrollViewDelegate?.indexChange(index: currentIndex)
     }
 }
 

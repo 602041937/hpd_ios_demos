@@ -10,12 +10,20 @@
 		6291D5FE84F773008722DD87 /* Pods_hpd_ios_demos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D41A38688D9D2904F81F6E7 /* Pods_hpd_ios_demos.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		C677A1E08535538C60F5AA03 /* Pods_hpd_ios_demosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F72F103F969BC644AF31A7 /* Pods_hpd_ios_demosTests.framework */; };
 		D57457A063FC741FD34104B3 /* Pods_hpd_ios_demosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F80021F8503EDA4D3777BB /* Pods_hpd_ios_demosUITests.framework */; };
+		EA12DF3524134B5A00369941 /* HCPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12DF3424134B5A00369941 /* HCPTabBarController.swift */; };
+		EA12DF3724139C1D00369941 /* HCPTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12DF3624139C1D00369941 /* HCPTabBarItemView.swift */; };
 		EA158AD723C88366004C0E73 /* HCPLazyLoadScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */; };
 		EA235E5C23654A4D0033EAE0 /* BezierPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA235E5B23654A4D0033EAE0 /* BezierPathViewController.swift */; };
 		EA235E5E23654AE80033EAE0 /* BezierDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA235E5D23654AE80033EAE0 /* BezierDemoView.swift */; };
+		EA482E942417D8CE0064CBB6 /* HCPNavigation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E932417D8CE0064CBB6 /* HCPNavigation1ViewController.swift */; };
+		EA482E962417E6BC0064CBB6 /* BaseViewWithNavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E952417E6BC0064CBB6 /* BaseViewWithNavBarController.swift */; };
+		EA482E982417F0BB0064CBB6 /* HCPNavigation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E972417F0BB0064CBB6 /* HCPNavigation2ViewController.swift */; };
+		EA482E9A241915B20064CBB6 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E99241915B20064CBB6 /* BaseNavigationViewController.swift */; };
+		EA482E9D241931F40064CBB6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E9C241931F40064CBB6 /* BaseViewController.swift */; };
 		EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7F82322287900E1A91F /* CardViewController.swift */; };
 		EA52B7FB2322287900E1A91F /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA52B7F92322287900E1A91F /* CardViewController.xib */; };
 		EA52B7FD232228F500E1A91F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52B7FC232228F500E1A91F /* CardView.swift */; };
+		EA6110AF24193A9C001E2139 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6110AE24193A9C001E2139 /* UIDevice+Extensions.swift */; };
 		EA64178023CC7166007BE209 /* SkeletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64177F23CC7166007BE209 /* SkeletonViewController.swift */; };
 		EA65CEE823D439FE007FC7BC /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65CEE723D439FE007FC7BC /* Page1ViewController.swift */; };
 		EA65CEEA23D43A22007FC7BC /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65CEE923D43A22007FC7BC /* Page2ViewController.swift */; };
@@ -77,12 +85,20 @@
 		737BD3B8885DE3E3E6E673DE /* Pods-hpd_ios_demos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demos.debug.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos.debug.xcconfig"; sourceTree = "<group>"; };
 		7D41A38688D9D2904F81F6E7 /* Pods_hpd_ios_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpd_ios_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44A56D20E0AEB24B80BA24C /* Pods-hpd_ios_demosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demosTests.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demosTests/Pods-hpd_ios_demosTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA12DF3424134B5A00369941 /* HCPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPTabBarController.swift; sourceTree = "<group>"; };
+		EA12DF3624139C1D00369941 /* HCPTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPTabBarItemView.swift; sourceTree = "<group>"; };
 		EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPLazyLoadScrollView.swift; sourceTree = "<group>"; };
 		EA235E5B23654A4D0033EAE0 /* BezierPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathViewController.swift; sourceTree = "<group>"; };
 		EA235E5D23654AE80033EAE0 /* BezierDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierDemoView.swift; sourceTree = "<group>"; };
+		EA482E932417D8CE0064CBB6 /* HCPNavigation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPNavigation1ViewController.swift; sourceTree = "<group>"; };
+		EA482E952417E6BC0064CBB6 /* BaseViewWithNavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewWithNavBarController.swift; sourceTree = "<group>"; };
+		EA482E972417F0BB0064CBB6 /* HCPNavigation2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPNavigation2ViewController.swift; sourceTree = "<group>"; };
+		EA482E99241915B20064CBB6 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		EA482E9C241931F40064CBB6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EA52B7F82322287900E1A91F /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		EA52B7F92322287900E1A91F /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		EA52B7FC232228F500E1A91F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EA6110AE24193A9C001E2139 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		EA64177F23CC7166007BE209 /* SkeletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonViewController.swift; sourceTree = "<group>"; };
 		EA65CEE723D439FE007FC7BC /* Page1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
 		EA65CEE923D43A22007FC7BC /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +190,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA12DF3224134B3200369941 /* HCP */ = {
+			isa = PBXGroup;
+			children = (
+				EA6110AE24193A9C001E2139 /* UIDevice+Extensions.swift */,
+				EA482E9B241931E00064CBB6 /* base */,
+				EA482E90241686FE0064CBB6 /* HCPNavigation */,
+				EA12DF3324134B3F00369941 /* HCPTabBar */,
+			);
+			path = HCP;
+			sourceTree = "<group>";
+		};
+		EA12DF3324134B3F00369941 /* HCPTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EA12DF3424134B5A00369941 /* HCPTabBarController.swift */,
+				EA12DF3624139C1D00369941 /* HCPTabBarItemView.swift */,
+			);
+			path = HCPTabBar;
+			sourceTree = "<group>";
+		};
 		EA158AD523C8831A004C0E73 /* code */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +226,25 @@
 				EA235E5D23654AE80033EAE0 /* BezierDemoView.swift */,
 			);
 			path = "不规则图形";
+			sourceTree = "<group>";
+		};
+		EA482E90241686FE0064CBB6 /* HCPNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				EA482E932417D8CE0064CBB6 /* HCPNavigation1ViewController.swift */,
+				EA482E972417F0BB0064CBB6 /* HCPNavigation2ViewController.swift */,
+			);
+			path = HCPNavigation;
+			sourceTree = "<group>";
+		};
+		EA482E9B241931E00064CBB6 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				EA482E952417E6BC0064CBB6 /* BaseViewWithNavBarController.swift */,
+				EA482E99241915B20064CBB6 /* BaseNavigationViewController.swift */,
+				EA482E9C241931F40064CBB6 /* BaseViewController.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 		EA52B7F7232114E300E1A91F /* CardView */ = {
@@ -317,8 +372,8 @@
 		EAFC7685231EB36700F528D3 /* 布局 */ = {
 			isa = PBXGroup;
 			children = (
+				EA12DF3224134B3200369941 /* HCP */,
 				EA64177E23CC7036007BE209 /* 加载空白图 */,
-				EAF2F8F323C820BC002DAF6F /* 懒加载控制器 */,
 				EA235E5A23634C530033EAE0 /* 不规则图形 */,
 				EAF2F8F323C820BC002DAF6F /* 懒加载控制器 */,
 				EAFC768C2323948C00F528D3 /* 圆角 */,
@@ -569,11 +624,17 @@
 			files = (
 				EA235E5E23654AE80033EAE0 /* BezierDemoView.swift in Sources */,
 				EA6D7DDD232A447A009A989C /* HCPRefreshViewController.swift in Sources */,
+				EA482E9D241931F40064CBB6 /* BaseViewController.swift in Sources */,
+				EA482E962417E6BC0064CBB6 /* BaseViewWithNavBarController.swift in Sources */,
+				EA482E9A241915B20064CBB6 /* BaseNavigationViewController.swift in Sources */,
 				EA235E5C23654A4D0033EAE0 /* BezierPathViewController.swift in Sources */,
+				EA482E982417F0BB0064CBB6 /* HCPNavigation2ViewController.swift in Sources */,
 				EAFC7653231EAFEF00F528D3 /* hpd_ios_demos.xcdatamodeld in Sources */,
 				EAF2F8F823C822A9002DAF6F /* HCPLazyLoadViewController.swift in Sources */,
+				EA6110AF24193A9C001E2139 /* UIDevice+Extensions.swift in Sources */,
 				EA6D7DE1232A46BE009A989C /* MainTabBarController.swift in Sources */,
 				EA52B7FD232228F500E1A91F /* CardView.swift in Sources */,
+				EA12DF3524134B5A00369941 /* HCPTabBarController.swift in Sources */,
 				EAFC767E231EB0E000F528D3 /* RichTextViewController.swift in Sources */,
 				EAF2F8F623C820EE002DAF6F /* LazyLoadViewController.swift in Sources */,
 				EA65CEE823D439FE007FC7BC /* Page1ViewController.swift in Sources */,
@@ -582,6 +643,7 @@
 				EA64178023CC7166007BE209 /* SkeletonViewController.swift in Sources */,
 				EAB5BEA52359A45A00A83B19 /* HCPTouchScrollView.swift in Sources */,
 				EA158AD723C88366004C0E73 /* HCPLazyLoadScrollView.swift in Sources */,
+				EA482E942417D8CE0064CBB6 /* HCPNavigation1ViewController.swift in Sources */,
 				EAFC764B231EAFEF00F528D3 /* AppDelegate.swift in Sources */,
 				EA65CEEA23D43A22007FC7BC /* Page2ViewController.swift in Sources */,
 				EAB5BEA92359AB4700A83B19 /* HCPTouch2TableView.swift in Sources */,
@@ -589,6 +651,7 @@
 				EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */,
 				EAFC768B231EB8F200F528D3 /* AutoWrapView.swift in Sources */,
 				EAFC7688231EB3B700F528D3 /* LayoutViewController.swift in Sources */,
+				EA12DF3724139C1D00369941 /* HCPTabBarItemView.swift in Sources */,
 				EAFC7683231EB32200F528D3 /* AutoWrapViewController.swift in Sources */,
 				EAB5BEB0235AEE2C00A83B19 /* HCPHomeViewController.swift in Sources */,
 				EAB5BEAB235AA65B00A83B19 /* HCTapGestureRecognizer.swift in Sources */,

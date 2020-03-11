@@ -9,10 +9,16 @@
 import UIKit
 
 class Page1ViewController: HCPLazyLoadViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .yellow
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        navigationController?.pushViewController(HCPNavigation1ViewController(), animated: true)
     }
 }
