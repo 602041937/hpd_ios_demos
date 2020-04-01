@@ -21,11 +21,20 @@ enum TiltePagerItemType {
     case image
 }
 
+protocol TitlePagerViewDelegate {
+    
+    func indexChange(index: Int)
+}
+
 class TitlePagerView: UIView {
+    
+    var delegate:TitlePagerViewDelegate?
     
     private let containerView = UIView()
     
     private let disposeBag = DisposeBag()
+    
+    private var isFirstLayoutSubviews = true
     
     private let scrollView = UIScrollView().then {
         $0.showsHorizontalScrollIndicator = false
@@ -66,6 +75,12 @@ class TitlePagerView: UIView {
             curretnX = itemView.frame.maxX
         }
         scrollView.contentSize = CGSize(width: curretnX, height: bounds.height)
+        if isFirstLayoutSubviews == true {
+            if dataItems.count > 0 {
+                indexChange(index: 0,animate: false)
+            }
+        }
+        isFirstLayoutSubviews = false
     }
     
     private func setUpView() {
@@ -86,7 +101,6 @@ class TitlePagerView: UIView {
     }
     
     func setData(tiltePagerItem: [TiltePagerItem]) {
-        
         
     }
     
@@ -121,7 +135,7 @@ class TitlePagerView: UIView {
         dataViews = tempViews
     }
     
-    private func indexChange(index: Int) {
+    private func indexChange(index: Int,animate: Bool = true) {
         print("TiltePagerItem index=\(index)")
         let itemView = dataViews[index]
     
@@ -133,9 +147,22 @@ class TitlePagerView: UIView {
         if offsetX > scrollView.contentSize.width - bounds.width {
             offsetX = scrollView.contentSize.width - bounds.width
         }
-        UIView.animate(withDuration: 0.25) {
-            self.indicateView.frame = CGRect(x: itemView.frame.midX - 15, y: self.bounds.maxY - 20, width: 30, height: 10)
-            self.scrollView.contentOffset = CGPoint(x: offsetX, y: 0)
+        if animate == true {
+            UIView.animate(withDuration: 0.25) {
+                self.indicateView.frame = CGRect(x: itemView.frame.midX - 15, y: self.bounds.maxY - 20, width: 30, height: 10)
+                self.scrollView.contentOffset = CGPoint(x: offsetX, y: 0)
+            }
+        }else {
+            indicateView.frame = CGRect(x: itemView.frame.midX - 15, y: self.bounds.maxY - 20, width: 30, height: 10)
+            scrollView.contentOffset = CGPoint(x: offsetX, y: 0)
+        }
+        
+        delegate?.indexChange(index: index)
+    }
+    
+    func setIndex(index: Int) {
+        if dataItems.count > index {
+            indexChange(index: index)
         }
     }
 }

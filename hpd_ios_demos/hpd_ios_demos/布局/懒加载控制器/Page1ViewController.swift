@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Then
 
 class Page1ViewController: HCPLazyLoadViewController {
     
-    private let titlePagerView = TitlePagerView()
-    
+    private lazy var titlePagerView = TitlePagerView().then {
+        $0.delegate = self
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +33,13 @@ class Page1ViewController: HCPLazyLoadViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        titlePagerView.setIndex(index: 3)
 //        navigationController?.pushViewController(HCPNavigation1ViewController(), animated: true)
+    }
+}
+
+extension Page1ViewController: TitlePagerViewDelegate {
+    func indexChange(index: Int) {
+        print("hcp page1 index=\(index)")
     }
 }

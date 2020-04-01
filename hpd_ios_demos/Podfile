@@ -6,7 +6,7 @@ target 'hpd_ios_demos' do
   use_modular_headers!
 
   # Pods for hpd_ios_demos
-  pod 'SnapKit', '~> 5.0.0'
+  pod 'SnapKit'
   pod 'Then'
   # RX
   pod 'RxSwift'

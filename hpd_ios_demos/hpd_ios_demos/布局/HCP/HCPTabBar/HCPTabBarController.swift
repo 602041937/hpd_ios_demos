@@ -20,7 +20,7 @@ class HCPTabBarController: BaseViewController {
     
     private let controller1 = Page1ViewController()
     private let controller2 = Page2ViewController()
-    private let controller3 = Page1ViewController()
+    private let controller3 = Page2ViewController()
     private let controller4 = Page2ViewController()
     
     private let tabbarContentView = UIView().then {
