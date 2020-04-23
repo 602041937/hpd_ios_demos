@@ -3,7 +3,7 @@ platform :ios, '12.2'
 
 target 'hpd_ios_demos' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_modular_headers!
+  use_frameworks!
 
   # Pods for hpd_ios_demos
   pod 'SnapKit'
@@ -13,6 +13,8 @@ target 'hpd_ios_demos' do
   pod 'RxGesture'
   
   pod "SkeletonView"
+  
+  pod 'BMPlayer'
 
   target 'hpd_ios_demosTests' do
     inherit! :search_paths

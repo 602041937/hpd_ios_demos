@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67068B4D1B3D50A6D9131915 /* libPods-hpd_ios_demos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DCD3EA81126E81AD8F89A6 /* libPods-hpd_ios_demos.a */; };
-		685D8B4DA000D5674C03988D /* libPods-hpd_ios_demosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4B78A9E08A888C9F6FFFD3 /* libPods-hpd_ios_demosTests.a */; };
+		799EF9D923C77055F16B8907 /* Pods_hpd_ios_demosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44CBC3BCE68E03EF91AAB70 /* Pods_hpd_ios_demosTests.framework */; };
+		91D51BFC0126D1AFB64EC3DB /* Pods_hpd_ios_demos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5711D024FC33AC97AD673 /* Pods_hpd_ios_demos.framework */; };
 		EA12DF3524134B5A00369941 /* HCPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12DF3424134B5A00369941 /* HCPTabBarController.swift */; };
 		EA12DF3724139C1D00369941 /* HCPTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12DF3624139C1D00369941 /* HCPTabBarItemView.swift */; };
 		EA158AD723C88366004C0E73 /* HCPLazyLoadScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */; };
@@ -56,7 +56,8 @@
 		EAFC7688231EB3B700F528D3 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC7686231EB3B700F528D3 /* LayoutViewController.swift */; };
 		EAFC7689231EB3B700F528D3 /* LayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFC7687231EB3B700F528D3 /* LayoutViewController.xib */; };
 		EAFC768B231EB8F200F528D3 /* AutoWrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC768A231EB8F200F528D3 /* AutoWrapView.swift */; };
-		F60A0AD2865FE58B06DB9FAD /* libPods-hpd_ios_demosUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBA79F1A0915D0E6C31ABAC /* libPods-hpd_ios_demosUITests.a */; };
+		EAFE9F4B24512D3000E1443D /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE9F4A24512D3000E1443D /* VideoViewController.swift */; };
+		F7A1C99EBA20E244913B24E4 /* Pods_hpd_ios_demosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4230C37E173642F5D4244 /* Pods_hpd_ios_demosUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,10 +83,9 @@
 		3ED900945ADB28CC0C810A8B /* Pods-hpd_ios_demos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demos.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos.release.xcconfig"; sourceTree = "<group>"; };
 		424F50F5826DDA0CB246EB47 /* Pods-hpd_ios_demosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demosUITests.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demosUITests/Pods-hpd_ios_demosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		737BD3B8885DE3E3E6E673DE /* Pods-hpd_ios_demos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demos.debug.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos.debug.xcconfig"; sourceTree = "<group>"; };
-		8F4B78A9E08A888C9F6FFFD3 /* libPods-hpd_ios_demosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hpd_ios_demosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACBA79F1A0915D0E6C31ABAC /* libPods-hpd_ios_demosUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hpd_ios_demosUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC5711D024FC33AC97AD673 /* Pods_hpd_ios_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpd_ios_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44A56D20E0AEB24B80BA24C /* Pods-hpd_ios_demosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demosTests.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demosTests/Pods-hpd_ios_demosTests.release.xcconfig"; sourceTree = "<group>"; };
-		E0DCD3EA81126E81AD8F89A6 /* libPods-hpd_ios_demos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hpd_ios_demos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44CBC3BCE68E03EF91AAB70 /* Pods_hpd_ios_demosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpd_ios_demosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA12DF3424134B5A00369941 /* HCPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPTabBarController.swift; sourceTree = "<group>"; };
 		EA12DF3624139C1D00369941 /* HCPTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPTabBarItemView.swift; sourceTree = "<group>"; };
 		EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPLazyLoadScrollView.swift; sourceTree = "<group>"; };
@@ -139,6 +139,8 @@
 		EAFC7686231EB3B700F528D3 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		EAFC7687231EB3B700F528D3 /* LayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutViewController.xib; sourceTree = "<group>"; };
 		EAFC768A231EB8F200F528D3 /* AutoWrapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoWrapView.swift; sourceTree = "<group>"; };
+		EAFE9F4A24512D3000E1443D /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		F2B4230C37E173642F5D4244 /* Pods_hpd_ios_demosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpd_ios_demosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67068B4D1B3D50A6D9131915 /* libPods-hpd_ios_demos.a in Frameworks */,
+				91D51BFC0126D1AFB64EC3DB /* Pods_hpd_ios_demos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				685D8B4DA000D5674C03988D /* libPods-hpd_ios_demosTests.a in Frameworks */,
+				799EF9D923C77055F16B8907 /* Pods_hpd_ios_demosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F60A0AD2865FE58B06DB9FAD /* libPods-hpd_ios_demosUITests.a in Frameworks */,
+				F7A1C99EBA20E244913B24E4 /* Pods_hpd_ios_demosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,9 +174,9 @@
 		0B0B5D1960BC54202A5415B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E0DCD3EA81126E81AD8F89A6 /* libPods-hpd_ios_demos.a */,
-				8F4B78A9E08A888C9F6FFFD3 /* libPods-hpd_ios_demosTests.a */,
-				ACBA79F1A0915D0E6C31ABAC /* libPods-hpd_ios_demosUITests.a */,
+				AEC5711D024FC33AC97AD673 /* Pods_hpd_ios_demos.framework */,
+				E44CBC3BCE68E03EF91AAB70 /* Pods_hpd_ios_demosTests.framework */,
+				F2B4230C37E173642F5D4244 /* Pods_hpd_ios_demosUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -293,6 +295,22 @@
 			path = "HCP刷新";
 			sourceTree = "<group>";
 		};
+		EAEE2B7F24512792006015BB /* 功能 */ = {
+			isa = PBXGroup;
+			children = (
+				EAEE2B80245128BC006015BB /* 播放器 */,
+			);
+			path = "功能";
+			sourceTree = "<group>";
+		};
+		EAEE2B80245128BC006015BB /* 播放器 */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE9F4A24512D3000E1443D /* VideoViewController.swift */,
+			);
+			path = "播放器";
+			sourceTree = "<group>";
+		};
 		EAF2F8F323C820BC002DAF6F /* 懒加载控制器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +347,7 @@
 		EAFC7649231EAFEF00F528D3 /* hpd_ios_demos */ = {
 			isa = PBXGroup;
 			children = (
+				EAEE2B7F24512792006015BB /* 功能 */,
 				EAFC7685231EB36700F528D3 /* 布局 */,
 				EAFC764A231EAFEF00F528D3 /* AppDelegate.swift */,
 				EAFC764C231EAFEF00F528D3 /* ViewController.swift */,
@@ -416,6 +435,7 @@
 				EAFC7643231EAFEF00F528D3 /* Sources */,
 				EAFC7644231EAFEF00F528D3 /* Frameworks */,
 				EAFC7645231EAFEF00F528D3 /* Resources */,
+				900BDC46DB70CE218F27ADA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -586,6 +606,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		900BDC46DB70CE218F27ADA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C36CCA1CBB1F74D0FB6E0F46 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -617,6 +654,7 @@
 			files = (
 				EA235E5E23654AE80033EAE0 /* BezierDemoView.swift in Sources */,
 				EA6D7DDD232A447A009A989C /* HCPRefreshViewController.swift in Sources */,
+				EAFE9F4B24512D3000E1443D /* VideoViewController.swift in Sources */,
 				EA482E9D241931F40064CBB6 /* BaseViewController.swift in Sources */,
 				EA482E962417E6BC0064CBB6 /* BaseViewWithNavBarController.swift in Sources */,
 				EA482E9A241915B20064CBB6 /* BaseNavigationViewController.swift in Sources */,

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let nav = UINavigationController(rootViewController: HCPRefreshViewController.newInstance())
 ////        window?.rootViewController = nav
         
-        let mainTabBarController = BaseNavigationViewController(rootViewController: HCPTabBarController())
+        let mainTabBarController = BaseNavigationViewController(rootViewController: VideoViewController())
         window?.rootViewController = mainTabBarController
         
         return true
