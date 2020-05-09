@@ -16,6 +16,7 @@
 		EA235E5C23654A4D0033EAE0 /* BezierPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA235E5B23654A4D0033EAE0 /* BezierPathViewController.swift */; };
 		EA235E5E23654AE80033EAE0 /* BezierDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA235E5D23654AE80033EAE0 /* BezierDemoView.swift */; };
 		EA3456E2246549EA00E45F5C /* HuanTuoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3456E1246549EA00E45F5C /* HuanTuoViewController.swift */; };
+		EA3456E52465554200E45F5C /* TalkfunSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3456E42465554200E45F5C /* TalkfunSDKFramework.framework */; };
 		EA482E942417D8CE0064CBB6 /* HCPNavigation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E932417D8CE0064CBB6 /* HCPNavigation1ViewController.swift */; };
 		EA482E962417E6BC0064CBB6 /* BaseViewWithNavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E952417E6BC0064CBB6 /* BaseViewWithNavBarController.swift */; };
 		EA482E982417F0BB0064CBB6 /* HCPNavigation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E972417F0BB0064CBB6 /* HCPNavigation2ViewController.swift */; };
@@ -91,9 +92,11 @@
 		EA12DF3624139C1D00369941 /* HCPTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPTabBarItemView.swift; sourceTree = "<group>"; };
 		EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPLazyLoadScrollView.swift; sourceTree = "<group>"; };
 		EA199C3C242DAFEE0028D595 /* TitlePagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePagerView.swift; sourceTree = "<group>"; };
+		EA1E2EBE24655D7800616A60 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		EA235E5B23654A4D0033EAE0 /* BezierPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathViewController.swift; sourceTree = "<group>"; };
 		EA235E5D23654AE80033EAE0 /* BezierDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierDemoView.swift; sourceTree = "<group>"; };
 		EA3456E1246549EA00E45F5C /* HuanTuoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuanTuoViewController.swift; sourceTree = "<group>"; };
+		EA3456E42465554200E45F5C /* TalkfunSDKFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TalkfunSDKFramework.framework; sourceTree = "<group>"; };
 		EA482E932417D8CE0064CBB6 /* HCPNavigation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPNavigation1ViewController.swift; sourceTree = "<group>"; };
 		EA482E952417E6BC0064CBB6 /* BaseViewWithNavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewWithNavBarController.swift; sourceTree = "<group>"; };
 		EA482E972417F0BB0064CBB6 /* HCPNavigation2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPNavigation2ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3456E52465554200E45F5C /* TalkfunSDKFramework.framework in Frameworks */,
 				91D51BFC0126D1AFB64EC3DB /* Pods_hpd_ios_demos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,9 +250,18 @@
 		EA3456E0246549C300E45F5C /* 欢拓 */ = {
 			isa = PBXGroup;
 			children = (
+				EA3456E32465528700E45F5C /* SDK */,
 				EA3456E1246549EA00E45F5C /* HuanTuoViewController.swift */,
 			);
 			path = "欢拓";
+			sourceTree = "<group>";
+		};
+		EA3456E32465528700E45F5C /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				EA3456E42465554200E45F5C /* TalkfunSDKFramework.framework */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 		EA482E90241686FE0064CBB6 /* HCPNavigation */ = {
@@ -369,6 +382,7 @@
 				EAFC7651231EAFEF00F528D3 /* hpd_ios_demos.xcdatamodeld */,
 				EA6D7DDF232A46BD009A989C /* MainTabBarController.swift */,
 				EA6D7DE0232A46BE009A989C /* MainTabBarController.xib */,
+				EA1E2EBE24655D7800616A60 /* Header.h */,
 			);
 			path = hpd_ios_demos;
 			sourceTree = "<group>";
@@ -447,6 +461,7 @@
 				EAFC7644231EAFEF00F528D3 /* Frameworks */,
 				EAFC7645231EAFEF00F528D3 /* Resources */,
 				900BDC46DB70CE218F27ADA5 /* [CP] Embed Pods Frameworks */,
+				2CB0FD0DCF05F963567F8A93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -593,6 +608,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CB0FD0DCF05F963567F8A93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		66878526576DA34D2CA455E5 /* [CP] Check Pods Manifest.lock */ = {
@@ -878,6 +910,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2D2BXPCBY8;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/hpd_ios_demos/欢拓/SDK",
+				);
 				INFOPLIST_FILE = hpd_ios_demos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -885,6 +921,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hpd.hpd-ios-demos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = hpd_ios_demos/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -898,6 +935,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2D2BXPCBY8;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/hpd_ios_demos/欢拓/SDK",
+				);
 				INFOPLIST_FILE = hpd_ios_demos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -905,6 +946,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hpd.hpd-ios-demos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = hpd_ios_demos/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

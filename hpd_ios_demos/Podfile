@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '12.2'
+#platform :ios, '9.0'
 
 target 'hpd_ios_demos' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -15,6 +15,13 @@ target 'hpd_ios_demos' do
   pod "SkeletonView"
   
   pod 'BMPlayer'
+  
+  # 欢拓
+  pod 'AgoraRtcEngine_iOS','~> 3.0.0' #SDK使用
+  pod 'TalkfunMediaFramework','~> 2.1.0' #SDK使用
+  pod 'Socket.IO-Client-Swift', '~> 15.1.0' #SDK使用
+  pod 'MJExtension', '~> 3.0.13' #SDK使用
+  # 欢拓
 
   target 'hpd_ios_demosTests' do
     inherit! :search_paths
