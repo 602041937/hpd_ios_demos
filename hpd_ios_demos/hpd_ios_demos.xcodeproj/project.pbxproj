@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		799EF9D923C77055F16B8907 /* Pods_hpd_ios_demosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44CBC3BCE68E03EF91AAB70 /* Pods_hpd_ios_demosTests.framework */; };
 		91D51BFC0126D1AFB64EC3DB /* Pods_hpd_ios_demos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5711D024FC33AC97AD673 /* Pods_hpd_ios_demos.framework */; };
+		EA109E9C2469248D009291B9 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA109E9B2469248D009291B9 /* ChatMessageTableViewCell.swift */; };
+		EA109E9F24693170009291B9 /* HuanTuoLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA109E9E24693170009291B9 /* HuanTuoLiveViewController.swift */; };
+		EA12789E24691D5C005B2685 /* ChatMessageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12789D24691D5C005B2685 /* ChatMessageEntity.swift */; };
 		EA12DF3524134B5A00369941 /* HCPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12DF3424134B5A00369941 /* HCPTabBarController.swift */; };
 		EA12DF3724139C1D00369941 /* HCPTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12DF3624139C1D00369941 /* HCPTabBarItemView.swift */; };
 		EA158AD723C88366004C0E73 /* HCPLazyLoadScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */; };
@@ -88,6 +91,9 @@
 		AEC5711D024FC33AC97AD673 /* Pods_hpd_ios_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpd_ios_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44A56D20E0AEB24B80BA24C /* Pods-hpd_ios_demosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demosTests.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demosTests/Pods-hpd_ios_demosTests.release.xcconfig"; sourceTree = "<group>"; };
 		E44CBC3BCE68E03EF91AAB70 /* Pods_hpd_ios_demosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpd_ios_demosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA109E9B2469248D009291B9 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
+		EA109E9E24693170009291B9 /* HuanTuoLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuanTuoLiveViewController.swift; sourceTree = "<group>"; };
+		EA12789D24691D5C005B2685 /* ChatMessageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageEntity.swift; sourceTree = "<group>"; };
 		EA12DF3424134B5A00369941 /* HCPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPTabBarController.swift; sourceTree = "<group>"; };
 		EA12DF3624139C1D00369941 /* HCPTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPTabBarItemView.swift; sourceTree = "<group>"; };
 		EA158AD623C88366004C0E73 /* HCPLazyLoadScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPLazyLoadScrollView.swift; sourceTree = "<group>"; };
@@ -200,6 +206,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA109E9D246924EF009291B9 /* 通用 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "通用";
+			sourceTree = "<group>";
+		};
 		EA12DF3224134B3200369941 /* HCP */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,8 +263,11 @@
 		EA3456E0246549C300E45F5C /* 欢拓 */ = {
 			isa = PBXGroup;
 			children = (
+				EA12789D24691D5C005B2685 /* ChatMessageEntity.swift */,
 				EA3456E32465528700E45F5C /* SDK */,
 				EA3456E1246549EA00E45F5C /* HuanTuoViewController.swift */,
+				EA109E9B2469248D009291B9 /* ChatMessageTableViewCell.swift */,
+				EA109E9E24693170009291B9 /* HuanTuoLiveViewController.swift */,
 			);
 			path = "欢拓";
 			sourceTree = "<group>";
@@ -370,6 +386,7 @@
 		EAFC7649231EAFEF00F528D3 /* hpd_ios_demos */ = {
 			isa = PBXGroup;
 			children = (
+				EA109E9D246924EF009291B9 /* 通用 */,
 				EA3456E0246549C300E45F5C /* 欢拓 */,
 				EAEE2B7F24512792006015BB /* 功能 */,
 				EAFC7685231EB36700F528D3 /* 布局 */,
@@ -695,6 +712,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA12789E24691D5C005B2685 /* ChatMessageEntity.swift in Sources */,
 				EA235E5E23654AE80033EAE0 /* BezierDemoView.swift in Sources */,
 				EA6D7DDD232A447A009A989C /* HCPRefreshViewController.swift in Sources */,
 				EAFE9F4B24512D3000E1443D /* VideoViewController.swift in Sources */,
@@ -707,6 +725,7 @@
 				EAFC7653231EAFEF00F528D3 /* hpd_ios_demos.xcdatamodeld in Sources */,
 				EAF2F8F823C822A9002DAF6F /* HCPLazyLoadViewController.swift in Sources */,
 				EA6110AF24193A9C001E2139 /* UIDevice+Extensions.swift in Sources */,
+				EA109E9F24693170009291B9 /* HuanTuoLiveViewController.swift in Sources */,
 				EA6D7DE1232A46BE009A989C /* MainTabBarController.swift in Sources */,
 				EA52B7FD232228F500E1A91F /* CardView.swift in Sources */,
 				EA12DF3524134B5A00369941 /* HCPTabBarController.swift in Sources */,
@@ -729,6 +748,7 @@
 				EAFC7688231EB3B700F528D3 /* LayoutViewController.swift in Sources */,
 				EA12DF3724139C1D00369941 /* HCPTabBarItemView.swift in Sources */,
 				EAFC7683231EB32200F528D3 /* AutoWrapViewController.swift in Sources */,
+				EA109E9C2469248D009291B9 /* ChatMessageTableViewCell.swift in Sources */,
 				EAB5BEB0235AEE2C00A83B19 /* HCPHomeViewController.swift in Sources */,
 				EAB5BEAB235AA65B00A83B19 /* HCTapGestureRecognizer.swift in Sources */,
 				EAAED36C235969A300D714D0 /* HCPTouchTableView.swift in Sources */,
