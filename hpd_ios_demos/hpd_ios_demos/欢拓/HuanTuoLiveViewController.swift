@@ -16,20 +16,10 @@ class HuanTuoLiveViewController: UIViewController {
     
     var messages: [ChatMessageEntity] = []
     
-    let accessToken = "4UzM3EDM0QWMhZmZhZmMzAjN0ETY3gjNjBTM5cjZyYGf8xXficDNzgzN58lM0YjN4kjI6ISZtFmbyJCLwojIhJCLdtlOiIHd0FmIsUzM5kDOxkDO1EjOiUWbpR3ZlJnIsISMyAzNxQzM1EjI6ICZphnIsUjN0MTM6ICZpBnIsAjOiQWanJCL3QzM4cTO6ICZp9VZzJXdvNmIsIiI6IichRXY2FmIsAjOiIXZk5WZnJCL1MTNzkTM5gTNxojIlJXawhXZiwiM0YjN4kjOiQWat92byJCLiQGcoJiOiUWbh52ajlmbiwiIyV2c1JiOiUGbvJnIsIyNyUTOiojIklWdiwSN2QzMxojIkl2XyVmb0JXYwJye"
+    let accessToken = "QmN1UTMzIjNzQmNkJzNkNmY0EmMlRmNkZjM3EjNiJGZ8xHf9JyN0MDO3kzXyQjN2gTOiojIl1WYuJnIsAjOiEmIs01W6Iic0RXYiwiM2IzM2ITO4UTM6ISZtlGdnVmciwiI1kzMzkjNzUTMiojIklGeiwSN2QzMxojIklGciwCM6ICZpdmIscDNzgzN5ojIkl2XlNnc192YiwiIiojIyFGdhZXYiwCM6IiclRmbldmIsIjN4YjNykDO1EjOiUmcpBHelJCLyQjN2gTO6ICZp12bvJnIsIyMkBHaiojIl1WYut2Yp5mIsIiclNXdiojIlx2byJCLiMzNyUTOiojIklWdiwSN2QzMxojIkl2XyVmb0JXYwJye"
     
-    let accessKey = "afb1f789abff80fab284c31c575e59ef"
-    
-    private let desktopView = UIView().then {
-        $0.backgroundColor = .orange
-    }
-    
-    private let pptView = UIView().then {
-        $0.backgroundColor = .green
-    }
-    
-    private let cameraView = UIView().then {
-        $0.backgroundColor = .yellow
+    private let containerView = UIView().then {
+        $0.backgroundColor = .black
     }
     
     private lazy var tableView = UITableView().then {
@@ -42,7 +32,7 @@ class HuanTuoLiveViewController: UIViewController {
         $0.showsVerticalScrollIndicator = false
     }
     
-    private let playButton = UIButton().then{
+    private let sendMessageButton = UIButton().then{
         $0.setTitle("发送公共消息", for: .normal)
         $0.backgroundColor = .green
     }
@@ -55,58 +45,42 @@ class HuanTuoLiveViewController: UIViewController {
         view.backgroundColor = .white
         
         let mWidth:CGFloat = kScreenWidth
-        
-        view.addSubview(desktopView)
-        desktopView.snp.makeConstraints { (make) in
+    
+        view.addSubview(containerView)
+        containerView.snp.makeConstraints { (make) in
             make.top.equalTo(100)
-            make.left.equalTo(0)
-            make.width.equalTo(mWidth)
-            make.height.equalTo( 3.0 / 4 * mWidth)
-        }
-        
-        view.addSubview(pptView)
-        pptView.snp.makeConstraints { (make) in
-            make.top.equalTo(desktopView.snp.bottom)
             make.left.equalTo(0)
             make.width.equalTo(mWidth)
             //            3.0 / 4 * mWidth)
             make.height.equalTo( 3.0 / 4 * mWidth)
         }
         
-        view.addSubview(cameraView)
-        cameraView.snp.makeConstraints { (make) in
-            make.top.equalTo(pptView.snp.bottom)
-            make.left.equalTo(0)
-            make.width.equalTo(mWidth)
-            make.height.equalTo( 3.0 / 4 * mWidth)
-        }
-        
-        view.addSubview(playButton)
-        playButton.snp.makeConstraints { (make) in
-            make.top.equalTo(cameraView.snp.bottom)
+        view.addSubview(sendMessageButton)
+        sendMessageButton.snp.makeConstraints { (make) in
+            make.top.equalTo(containerView.snp.bottom)
             make.left.equalTo(0)
             make.right.equalTo(0)
             make.height.equalTo(40)
         }
-        playButton.rx.tap.subscribe(onNext:{ [weak self] (_) in
+        sendMessageButton.rx.tap.subscribe(onNext:{ [weak self] (_) in
             guard let `self` = self else { return }
             self.sendMessage()
         }).disposed(by: disposeBag)
         
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(playButton.snp.bottom)
+            make.top.equalTo(sendMessageButton.snp.bottom)
             make.left.right.bottom.equalTo(0)
         }
         
-        //        talkfunSDKLive = talkfunSDKLive(accessKey: accessKey, parameters: parameters)
         talkfunSDKLive = TalkfunSDKLive(accessToken: accessToken, parameters: [:])
+        talkfunSDKLive.delegate = self
         talkfunSDKLive.setPauseInBackground(false)
-        self.talkfunSDKLive.configureDesktopContainerView(self.desktopView)
-        self.talkfunSDKLive.configurePPTContainerView(self.pptView)
-//        self.talkfunSDKLive.configureMediaContainerView(self.pptView)
-        //        self.talkfunSDKLive.configureCameraContainerView(self.cameraView)
-        
+        talkfunSDKLive.configurePPTContainerView(containerView)
+        do {
+            containerView.subviews[0].frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 3.0 / 4 * kScreenWidth)
+        }
+
         talkfunSDKLive.on(TALKFUN_EVENT_ROOM_INIT) { (result) in
             print("huantuo 房间初始化 \(result)")
         }
@@ -144,20 +118,21 @@ class HuanTuoLiveViewController: UIViewController {
                 let currentMode = result["currentMode"] as! Int
                 if currentMode == TalkfunLiveModeVideo.rawValue {
                     print("huantuo TalkfunLiveModeVideo")
-                    self.talkfunSDKLive.configurePPTContainerView(self.pptView)
-                    //                    self.talkfunSDKLive.configureMediaContainerView(self.desktopView)
-                    self.pptView.subviews[0].frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 3.0 / 4 * kScreenWidth)
+                    for sub in self.containerView.subviews {
+                        sub.removeFromSuperview()
+                    }
+                    self.talkfunSDKLive.configurePPTContainerView(self.containerView)
+                    self.containerView.subviews[0].frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 3.0 / 4 * kScreenWidth)
                 }else if currentMode == TalkfunLiveModeDesktop.rawValue {
                     print("huantuo TalkfunLiveModeDesktop")
-                    
-//                    self.talkfunSDKLive.configureDesktopContainerView(self.desktopView)
+                    for sub in self.containerView.subviews {
+                        sub.removeFromSuperview()
+                    }
+                    self.talkfunSDKLive.configureDesktopContainerView(self.containerView)
                 }else if currentMode == TalkfunLiveModeRTC.rawValue {
                     print("huantuo TalkfunLiveModeRTC")
                 }
             }
-            //            self.talkfunSDKLive.configureDesktopContainerView(self.desktopView)
-            //            self.talkfunSDKLive.configurePPTContainerView(self.pptView)
-            //            self.talkfunSDKLive.configureCameraContainerView(self.cameraView)
         }
         
         talkfunSDKLive.on(TALKFUN_EVENT_LIVE_START) { (result) in
@@ -182,6 +157,10 @@ class HuanTuoLiveViewController: UIViewController {
         
         talkfunSDKLive.on(TALKFUN_EVENT_MEMBER_KICK) { (result) in
             print("huantuo 踢人 \(result)")
+//            huantuo 踢人 Optional({
+//                nickname = hpd1;
+//                xid = 153666331;
+//            })
         }
         
         talkfunSDKLive.on(TALKFUN_EVENT_MEMBER_FORCEOUT) { (result) in
@@ -210,6 +189,15 @@ class HuanTuoLiveViewController: UIViewController {
             //                uid = "zb_9e7a2c04b001b64bba5acc5a150124ed";
             //                xid = 153416973;
             //            })
+            do {
+                let item = result as! NSDictionary
+                let entity = ChatMessageEntity()
+                entity.avatar = item["avatar"] as! String
+                entity.msg = item["msg"] as! String
+                entity.nickname = item["nickname"] as! String
+                self.messages = self.messages + [entity]
+                self.tableView.reloadData()
+            }
         }
         
         talkfunSDKLive.on(TALKFUN_EVENT_CHAT_PRIVATE) { (result) in
@@ -219,6 +207,61 @@ class HuanTuoLiveViewController: UIViewController {
         talkfunSDKLive.on(TALKFUN_EVENT_CHAT_DISABLE) { (result) in
             print("huantuo 禁言 \(result)")
         }
+        
+        talkfunSDKLive.on(TALKFUN_EVENT_CHAT_ENABLE) { (result) in
+            print("huantuo 解除禁言 \(result)")
+        }
+        
+        talkfunSDKLive.on(TALKFUN_EVENT_CHAT_DISABLE_ALL) { (result) in
+            do {
+                let item = try result as! NSDictionary
+                let status = item["status"] as? String
+                if let status = status {
+                    if status == "0" {
+                        print("huantuo 全体解除禁言")
+                    }else {
+                        print("huantuo 全体禁言")
+                    }
+                    return
+                }
+                let iStatus = item["status"] as? Int
+                if let iStatus = iStatus {
+                    if iStatus == 0 {
+                        print("huantuo 全体解除禁言")
+                    }else {
+                        print("huantuo 全体禁言")
+                    }
+                    return
+                }
+            }catch {
+                print("huantuo 全体禁言出错")
+            }
+        }
+        
+        talkfunSDKLive.on(TALKFUN_EVENT_BROADCAST) { (result) in
+            /**
+             huantuo 公告 Optional({
+                 "__auto" = 1;
+                 gid = 0;
+                 message = "\U6211\U662f\U5e7f\U64ad";
+                 t = 1589263754;
+                 uniqid = 5eba3d8ace2dd;
+             })
+             */
+            print("huantuo 广播 \(result)")
+        }
+        
+        talkfunSDKLive.on(TALKFUN_EVENT_ANNOUNCE_NOTICE) { (result) in
+            /**
+             huantuo 公告 Optional({
+             content = "\U6211\U662f\U516c\U544a\U554a\Uff0c\U54c8\U54c8\U54c8";
+             nickname = "\U96c5\U601d\U54e5\U8bfe\U5802";
+             time = "2020-05-12 14:11";
+             })
+              */
+             print("huantuo 公告 \(result)")
+        }
+        
     }
     
     private func sendMessage() {
@@ -248,6 +291,26 @@ class HuanTuoLiveViewController: UIViewController {
         //        })
         talkfunSDKLive.emit(TALKFUN_EVENT_CHAT_SEND, parameter: ["msg":"hello"]) { (result) in
             print("huantuo 发送公共聊天 \(result)")
+            //注意，禁言也会发送成功
+            print("self.talkfunSDKLive.me=\(self.talkfunSDKLive.me)")
+            
+            do {
+                let item = result as! NSDictionary
+                let code = item["code"] as! Int
+                if code == 0 {
+                    print("huantuo 发送成功")
+                    let data = item["data"] as! NSDictionary
+                    let entity = ChatMessageEntity()
+                    entity.avatar = data["avatar"] as! String
+                    entity.msg = data["msg"] as! String
+                    entity.nickname = data["nickname"] as! String
+                    self.messages = self.messages + [entity]
+                    self.tableView.reloadData()
+                }else if code == -1 {
+                    let msg = item["msg"] as! String
+                    print("huantuo \(msg)")
+                }
+            }
         }
     }
     
@@ -268,5 +331,41 @@ extension HuanTuoLiveViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageTableViewCell") as! ChatMessageTableViewCell
         cell.setData(entity: messages[indexPath.row])
         return cell
+    }
+}
+
+
+extension HuanTuoLiveViewController: TalkfunSDKLiveDelegate {
+    
+    func playStatusChange(_ status: TalkfunPlayStatus) {
+        print("huantuo delegate playStatusChange \(status)")
+    }
+    
+    func playerLoadStateDidChange(_ loadState: TalkfunPlayerLoadState) {
+        print("huantuo delegate playerLoadStateDidChange \(loadState)")
+    }
+    
+    func playerPlaybackDidFinish(_ reason: TalkfunPlayerMovieFinishReason) {
+        print("huantuo delegate playerPlaybackDidFinish \(reason)")
+    }
+    
+    func multiMediaApplicate(_ status: TalkfunMultiMediaStatusChangeListener, time: Int32) {
+        print("huantuo delegate multiMediaApplicate \(status) \(time)")
+    }
+    
+    func isRealDesktop(_ isDesktop: Bool) {
+        print("huantuo delegate isRealDesktop \(isDesktop)")
+    }
+    
+    func loadCourseware() {
+        print("huantuo delegate loadCourseware")
+    }
+    
+    func videoProfileWidth(_ width: CGFloat, hight: CGFloat) {
+        print("huantuo delegate videoProfileWidth \(width) \(hight)")
+    }
+    
+    func whiteboardPageFrame(_ frame: CGRect) {
+        print("huantuo delegate whiteboardPageFrame \(frame)")
     }
 }
