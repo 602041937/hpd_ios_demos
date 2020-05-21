@@ -16,7 +16,7 @@ class HuanTuoLiveViewController: UIViewController {
     
     var messages: [ChatMessageEntity] = []
     
-    let accessToken = "QmN1UTMzIjNzQmNkJzNkNmY0EmMlRmNkZjM3EjNiJGZ8xHf9JyN0MDO3kzXyQjN2gTOiojIl1WYuJnIsAjOiEmIs01W6Iic0RXYiwiM2IzM2ITO4UTM6ISZtlGdnVmciwiI1kzMzkjNzUTMiojIklGeiwSN2QzMxojIklGciwCM6ICZpdmIscDNzgzN5ojIkl2XlNnc192YiwiIiojIyFGdhZXYiwCM6IiclRmbldmIsIjN4YjNykDO1EjOiUmcpBHelJCLyQjN2gTO6ICZp12bvJnIsIyMkBHaiojIl1WYut2Yp5mIsIiclNXdiojIlx2byJCLiMzNyUTOiojIklWdiwSN2QzMxojIkl2XyVmb0JXYwJye"
+    let accessToken = "QGM3MGZ0UTM1UDNihjZ3UDZjVGZ2gTN5MWMmhTZ4MjM8xHf9JyMwATN4kzX2ETNwkTOiojIl1WYuJnIsAjOiEmIs01W6Iic0RXYiwSO4UDOxQTO4UTM6ISZtlGdnVmciwiI1kDN5UTOzUTMiojIklGeiwSN2QzMxojIklGciwCM6ICZpdmIsMDMwUDO5ojIkl2XlNnc192YiwiIiojIyFGdhZXYiwCM6IiclRmbldmIskDOxIjM0kDO1EjOiUmcpBHelJCL2ETNwkTO6ICZp12bvJnIsICNkBHaiojIl1WYut2Yp5mIsIiclNXdiojIlx2byJCLiQzNyUTOiojIklWdiwSN2QzMxojIkl2XyVmb0JXYwJye"
     
     private let containerView = UIView().then {
         $0.backgroundColor = .black
@@ -37,10 +37,31 @@ class HuanTuoLiveViewController: UIViewController {
         $0.backgroundColor = .green
     }
     
+    private let acceptButton = UIButton().then{
+        $0.setTitle("同意被邀请上讲台", for: .normal)
+        $0.backgroundColor = .red
+    }
+    
+    private let rejectButton = UIButton().then{
+        $0.setTitle("拒绝被邀请上讲台", for: .normal)
+        $0.backgroundColor = .blue
+    }
+    
     var talkfunSDKLive: TalkfunSDKLive!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.rx.notification(NSNotification.Name.TalkfunError).subscribe(onNext:{ [weak self] (value) in
+            guard let `self` = self else { return }
+            //            huantuo TalkfunError name = TalkfunErrorNotification, object = nil, userInfo = Optional([AnyHashable("msg"): 直播初始化失败, AnyHashable("code"): 10034])
+            print("huantuo TalkfunError \(value)")
+            if let userInfo = value.userInfo {
+                if let msg = userInfo["msg"] as? String {
+                    
+                }
+            }
+        }).disposed(by: disposeBag)
         
         view.backgroundColor = .white
         
@@ -67,9 +88,33 @@ class HuanTuoLiveViewController: UIViewController {
             self.sendMessage()
         }).disposed(by: disposeBag)
         
+        view.addSubview(acceptButton)
+        acceptButton.snp.makeConstraints { (make) in
+            make.top.equalTo(sendMessageButton.snp.bottom)
+            make.left.equalTo(0)
+            make.right.equalTo(0)
+            make.height.equalTo(40)
+        }
+        acceptButton.rx.tap.subscribe(onNext:{ [weak self] (_) in
+            guard let `self` = self else { return }
+            self.acceptInvite()
+        }).disposed(by: disposeBag)
+        
+        view.addSubview(rejectButton)
+        rejectButton.snp.makeConstraints { (make) in
+            make.top.equalTo(acceptButton.snp.bottom)
+            make.left.equalTo(0)
+            make.right.equalTo(0)
+            make.height.equalTo(40)
+        }
+        rejectButton.rx.tap.subscribe(onNext:{ [weak self] (_) in
+            guard let `self` = self else { return }
+            self.rejuctInvite()
+        }).disposed(by: disposeBag)
+        
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(sendMessageButton.snp.bottom)
+            make.top.equalTo(rejectButton.snp.bottom)
             make.left.right.bottom.equalTo(0)
         }
         
@@ -262,6 +307,35 @@ class HuanTuoLiveViewController: UIViewController {
              print("huantuo 公告 \(result)")
         }
         
+        talkfunSDKLive.on(TALKFUN_EVENT_RTC_INVITE) { [weak self] (result) in
+            /**
+             huantuo 公告 Optional({
+             content = "\U6211\U662f\U516c\U544a\U554a\Uff0c\U54c8\U54c8\U54c8";
+             nickname = "\U96c5\U601d\U54e5\U8bfe\U5802";
+             time = "2020-05-12 14:11";
+             })
+             */
+            print("huantuo 被邀请上讲台 \(result)")
+            guard let `self` = self else { return }
+        }
+        
+    }
+    
+    private func acceptInvite() {
+        
+        talkfunSDKLive.respondinvite(TalkfunRespondinviteStatusAccept) { (result) in
+            print("huantuo 同意被邀请上讲台 \(result)")
+//            huantuo 同意被邀请上讲台 Optional({
+//                code = 0;
+//            })
+        }
+    }
+    
+    private func rejuctInvite() {
+        
+        talkfunSDKLive.respondinvite(TalkfunRespondinviteStatusReject) { (result) in
+            print("huantuo 拒绝被邀请上讲台 \(result)")
+        }
     }
     
     private func sendMessage() {
