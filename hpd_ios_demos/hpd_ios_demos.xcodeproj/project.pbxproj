@@ -20,6 +20,8 @@
 		EA235E5E23654AE80033EAE0 /* BezierDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA235E5D23654AE80033EAE0 /* BezierDemoView.swift */; };
 		EA3456E2246549EA00E45F5C /* HuanTuoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3456E1246549EA00E45F5C /* HuanTuoViewController.swift */; };
 		EA3456E52465554200E45F5C /* TalkfunSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3456E42465554200E45F5C /* TalkfunSDKFramework.framework */; };
+		EA40081E260C72D700B371B3 /* SynthesisScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA40081D260C72D700B371B3 /* SynthesisScoreViewController.swift */; };
+		EA400826260C72F000B371B3 /* SynthesisScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA400825260C72F000B371B3 /* SynthesisScoreView.swift */; };
 		EA482E942417D8CE0064CBB6 /* HCPNavigation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E932417D8CE0064CBB6 /* HCPNavigation1ViewController.swift */; };
 		EA482E962417E6BC0064CBB6 /* BaseViewWithNavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E952417E6BC0064CBB6 /* BaseViewWithNavBarController.swift */; };
 		EA482E982417F0BB0064CBB6 /* HCPNavigation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA482E972417F0BB0064CBB6 /* HCPNavigation2ViewController.swift */; };
@@ -103,6 +105,8 @@
 		EA235E5D23654AE80033EAE0 /* BezierDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierDemoView.swift; sourceTree = "<group>"; };
 		EA3456E1246549EA00E45F5C /* HuanTuoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuanTuoViewController.swift; sourceTree = "<group>"; };
 		EA3456E42465554200E45F5C /* TalkfunSDKFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TalkfunSDKFramework.framework; sourceTree = "<group>"; };
+		EA40081D260C72D700B371B3 /* SynthesisScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesisScoreViewController.swift; sourceTree = "<group>"; };
+		EA400825260C72F000B371B3 /* SynthesisScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesisScoreView.swift; sourceTree = "<group>"; };
 		EA482E932417D8CE0064CBB6 /* HCPNavigation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPNavigation1ViewController.swift; sourceTree = "<group>"; };
 		EA482E952417E6BC0064CBB6 /* BaseViewWithNavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewWithNavBarController.swift; sourceTree = "<group>"; };
 		EA482E972417F0BB0064CBB6 /* HCPNavigation2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCPNavigation2ViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +284,15 @@
 			path = SDK;
 			sourceTree = "<group>";
 		};
+		EA40081C260C720100B371B3 /* 指标图 */ = {
+			isa = PBXGroup;
+			children = (
+				EA40081D260C72D700B371B3 /* SynthesisScoreViewController.swift */,
+				EA400825260C72F000B371B3 /* SynthesisScoreView.swift */,
+			);
+			path = "指标图";
+			sourceTree = "<group>";
+		};
 		EA482E90241686FE0064CBB6 /* HCPNavigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +457,7 @@
 		EAFC7685231EB36700F528D3 /* 布局 */ = {
 			isa = PBXGroup;
 			children = (
+				EA40081C260C720100B371B3 /* 指标图 */,
 				EA12DF3224134B3200369941 /* HCP */,
 				EA64177E23CC7036007BE209 /* 加载空白图 */,
 				EA235E5A23634C530033EAE0 /* 不规则图形 */,
@@ -706,6 +720,7 @@
 			files = (
 				EA12789E24691D5C005B2685 /* ChatMessageEntity.swift in Sources */,
 				EA235E5E23654AE80033EAE0 /* BezierDemoView.swift in Sources */,
+				EA400826260C72F000B371B3 /* SynthesisScoreView.swift in Sources */,
 				EA6D7DDD232A447A009A989C /* HCPRefreshViewController.swift in Sources */,
 				EAFE9F4B24512D3000E1443D /* VideoViewController.swift in Sources */,
 				EA482E9D241931F40064CBB6 /* BaseViewController.swift in Sources */,
@@ -737,6 +752,7 @@
 				EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */,
 				EAFC768B231EB8F200F528D3 /* AutoWrapView.swift in Sources */,
 				EA3456E2246549EA00E45F5C /* HuanTuoViewController.swift in Sources */,
+				EA40081E260C72D700B371B3 /* SynthesisScoreViewController.swift in Sources */,
 				EAFC7688231EB3B700F528D3 /* LayoutViewController.swift in Sources */,
 				EA12DF3724139C1D00369941 /* HCPTabBarItemView.swift in Sources */,
 				EAFC7683231EB32200F528D3 /* AutoWrapViewController.swift in Sources */,
