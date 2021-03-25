@@ -1,5 +1,5 @@
 PODS:
-  - AgoraRtcEngine_iOS (3.0.0.30)
+  - AgoraRtcEngine_iOS (3.0.1)
   - BMPlayer (1.3.1):
     - BMPlayer/Full (= 1.3.1)
   - BMPlayer/Core (1.3.1)
@@ -26,7 +26,7 @@ PODS:
     - Starscream (~> 3.1)
   - Starscream (3.1.1)
   - TalkfunMediaFramework (2.1.0)
-  - Then (2.6.0)
+  - Then (2.7.0)
 
 DEPENDENCIES:
   - AgoraRtcEngine_iOS (~> 3.0.0)
@@ -58,7 +58,7 @@ SPEC REPOS:
     - Then
 
 SPEC CHECKSUMS:
-  AgoraRtcEngine_iOS: 5b39142beec664fa82772ff16e0b4c79c175bda0
+  AgoraRtcEngine_iOS: 82c8c519f5b53ecc6c0d7909da6d33662d1e5ac1
   BMPlayer: f822f82a14026ad0fcc10b4e49090c486841dd12
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
@@ -71,8 +71,8 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: 7cb44c0ffb86e158cee32d0642d30ec5fdcf8f61
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   TalkfunMediaFramework: 7c6d484cbe24c084bcc6ea3129e1ae53bb809451
-  Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
 PODFILE CHECKSUM: 4a9cb813266a0266f302eeebfd686039f7d752e0
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1

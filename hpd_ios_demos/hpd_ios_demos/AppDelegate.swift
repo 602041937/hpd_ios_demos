@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Then
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,9 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let nav = UINavigationController(rootViewController: HCPRefreshViewController.newInstance())
 ////        window?.rootViewController = nav
         
-        let mainTabBarController = BaseNavigationViewController(rootViewController: HuanTuoLiveViewController())
+        let mainTabBarController = BaseNavigationViewController(rootViewController: AutoWrapViewController())
         window?.rootViewController = mainTabBarController
-        
         return true
     }
 

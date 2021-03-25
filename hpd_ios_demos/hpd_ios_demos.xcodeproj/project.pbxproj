@@ -448,7 +448,6 @@
 				EA64177E23CC7036007BE209 /* 加载空白图 */,
 				EA235E5A23634C530033EAE0 /* 不规则图形 */,
 				EAF2F8F323C820BC002DAF6F /* 懒加载控制器 */,
-				EAFC768C2323948C00F528D3 /* 圆角 */,
 				EA6D7DDA232A4459009A989C /* HCP刷新 */,
 				EA52B7F7232114E300E1A91F /* CardView */,
 				EAFC767B231EB08300F528D3 /* 富文本 */,
@@ -457,13 +456,6 @@
 				EAFC7687231EB3B700F528D3 /* LayoutViewController.xib */,
 			);
 			path = "布局";
-			sourceTree = "<group>";
-		};
-		EAFC768C2323948C00F528D3 /* 圆角 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "圆角";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
