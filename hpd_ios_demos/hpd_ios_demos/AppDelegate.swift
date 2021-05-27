@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let nav = UINavigationController(rootViewController: HCPRefreshViewController.newInstance())
 ////        window?.rootViewController = nav
         
-        let mainTabBarController = BaseNavigationViewController(rootViewController: SynthesisScoreViewController())
+        let mainTabBarController = BaseNavigationViewController(rootViewController: YouzanViewController())
         window?.rootViewController = mainTabBarController
         return true
     }

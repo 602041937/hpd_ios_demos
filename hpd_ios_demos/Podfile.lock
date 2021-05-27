@@ -27,6 +27,11 @@ PODS:
   - Starscream (3.1.1)
   - TalkfunMediaFramework (2.1.0)
   - Then (2.7.0)
+  - YZAppSDK (7.1.6):
+    - YZAppSDK/Base (= 7.1.6)
+  - YZAppSDK/Base (7.1.6):
+    - YZAppSDK/Core
+  - YZAppSDK/Core (7.1.6)
 
 DEPENDENCIES:
   - AgoraRtcEngine_iOS (~> 3.0.0)
@@ -39,6 +44,7 @@ DEPENDENCIES:
   - Socket.IO-Client-Swift (~> 15.1.0)
   - TalkfunMediaFramework (~> 2.1.0)
   - Then
+  - YZAppSDK
 
 SPEC REPOS:
   trunk:
@@ -56,9 +62,10 @@ SPEC REPOS:
     - Starscream
     - TalkfunMediaFramework
     - Then
+    - YZAppSDK
 
 SPEC CHECKSUMS:
-  AgoraRtcEngine_iOS: 82c8c519f5b53ecc6c0d7909da6d33662d1e5ac1
+  AgoraRtcEngine_iOS: 649f5e2b602c1a80264165e89a5e4d9986957b3a
   BMPlayer: f822f82a14026ad0fcc10b4e49090c486841dd12
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
@@ -72,7 +79,8 @@ SPEC CHECKSUMS:
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   TalkfunMediaFramework: 7c6d484cbe24c084bcc6ea3129e1ae53bb809451
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  YZAppSDK: 0414f331c78f4a630aa20b8a30d63367e5149686
 
-PODFILE CHECKSUM: 4a9cb813266a0266f302eeebfd686039f7d752e0
+PODFILE CHECKSUM: 21ef4fd4583da9d7e602ae7b0447b6779f605874
 
 COCOAPODS: 1.10.1
