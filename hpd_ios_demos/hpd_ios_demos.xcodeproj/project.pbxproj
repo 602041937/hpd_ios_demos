@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		799EF9D923C77055F16B8907 /* Pods_hpd_ios_demosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44CBC3BCE68E03EF91AAB70 /* Pods_hpd_ios_demosTests.framework */; };
+		7B0E53042664ED3300FB4ECE /* YouZanWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E53032664ED3300FB4ECE /* YouZanWebViewController.swift */; };
 		7BDA3544265CAA3E00070196 /* YouzanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA3543265CAA3E00070196 /* YouzanViewController.swift */; };
 		91D51BFC0126D1AFB64EC3DB /* Pods_hpd_ios_demos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5711D024FC33AC97AD673 /* Pods_hpd_ios_demos.framework */; };
 		EA109E9C2469248D009291B9 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA109E9B2469248D009291B9 /* ChatMessageTableViewCell.swift */; };
@@ -91,6 +92,7 @@
 		3ED900945ADB28CC0C810A8B /* Pods-hpd_ios_demos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demos.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos.release.xcconfig"; sourceTree = "<group>"; };
 		424F50F5826DDA0CB246EB47 /* Pods-hpd_ios_demosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demosUITests.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demosUITests/Pods-hpd_ios_demosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		737BD3B8885DE3E3E6E673DE /* Pods-hpd_ios_demos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demos.debug.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demos/Pods-hpd_ios_demos.debug.xcconfig"; sourceTree = "<group>"; };
+		7B0E53032664ED3300FB4ECE /* YouZanWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouZanWebViewController.swift; sourceTree = "<group>"; };
 		7BDA3543265CAA3E00070196 /* YouzanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouzanViewController.swift; sourceTree = "<group>"; };
 		AEC5711D024FC33AC97AD673 /* Pods_hpd_ios_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hpd_ios_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44A56D20E0AEB24B80BA24C /* Pods-hpd_ios_demosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hpd_ios_demosTests.release.xcconfig"; path = "Target Support Files/Pods-hpd_ios_demosTests/Pods-hpd_ios_demosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				7BDA3543265CAA3E00070196 /* YouzanViewController.swift */,
+				7B0E53032664ED3300FB4ECE /* YouZanWebViewController.swift */,
 			);
 			path = "有赞";
 			sourceTree = "<group>";
@@ -760,6 +763,7 @@
 				EA65CEEA23D43A22007FC7BC /* Page2ViewController.swift in Sources */,
 				EAB5BEA92359AB4700A83B19 /* HCPTouch2TableView.swift in Sources */,
 				EAB5BEAD235AAEB500A83B19 /* HCPTouchTableViewCell.swift in Sources */,
+				7B0E53042664ED3300FB4ECE /* YouZanWebViewController.swift in Sources */,
 				EA52B7FA2322287900E1A91F /* CardViewController.swift in Sources */,
 				EAFC768B231EB8F200F528D3 /* AutoWrapView.swift in Sources */,
 				EA3456E2246549EA00E45F5C /* HuanTuoViewController.swift in Sources */,
